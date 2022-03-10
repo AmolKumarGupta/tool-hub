@@ -1,0 +1,18 @@
+{
+  "name": "collegeproject",
+  "version": "0.1.0",
+  "description": "it is a project for final semester",
+  "main": "index.js",
+  "scripts": {
+    "watch":"postcss src/style.css -o dist/style.css --watch"
+  },
+  "author": "amol kumar gupta",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.0.23",
+    "postcss-cli": "^9.1.0",
+    "autoprefixer": "^10.4.2"
+  },
+  "dependencies": {
+  }
+}
