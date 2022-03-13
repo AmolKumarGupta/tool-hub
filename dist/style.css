@@ -483,6 +483,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
 .bg-sky-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(240 249 255 / var(--tw-bg-opacity));
@@ -508,9 +512,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .font-bold {
   font-weight: 700;
 }
+.hover\:border-2:hover {
+  border-width: 2px;
+}
 .hover\:border-gray-500:hover {
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+.hover\:border-black:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+.hover\:border-sky-900:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(12 74 110 / var(--tw-border-opacity));
 }
 .hover\:bg-zinc-200:hover {
   --tw-bg-opacity: 1;
@@ -556,16 +571,49 @@ Ensure the default browser behavior of the `hidden` attribute.
     justify-content: flex-end;
   }
 
-  .sm\:gap-2 {
-    gap: 0.5rem;
-  }
-
   .sm\:gap-1 {
     gap: 0.25rem;
   }
 
   .sm\:border-none {
     border-style: none;
+  }
+
+  .sm\:border-black {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  }
+
+  .sm\:border-sky-900\/100 {
+    border-color: rgb(12 74 110 / 1);
+  }
+
+  .sm\:border-sky-50 {
+    --tw-border-opacity: 1;
+    border-color: rgb(240 249 255 / var(--tw-border-opacity));
+  }
+
+  .sm\:hover\:border-2:hover {
+    border-width: 2px;
+  }
+
+  .hover\:sm\:border-2:hover {
+    border-width: 2px;
+  }
+
+  .sm\:hover\:border-black:hover {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  }
+
+  .hover\:sm\:border-black:hover {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  }
+
+  .sm\:hover\:border-sky-900:hover {
+    --tw-border-opacity: 1;
+    border-color: rgb(12 74 110 / var(--tw-border-opacity));
   }
 }
 
