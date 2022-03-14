@@ -36,6 +36,12 @@
     height:50%;
   }
   .slider-btn{
-    @apply inline-flex w-6 h-6 rounded-full bg-sky-100 justify-center items-center relative active:bg-gray-300 focus:bg-gray-300;
+    @apply inline-flex w-6 h-6 sm:w-4 sm:h-4 rounded-full bg-sky-100 justify-center items-center relative active:bg-gray-300 focus:bg-gray-300;
+  }
+  .btn-download{
+    @apply bg-sky-200 hover:bg-sky-300  border-2 border-black rounded shadow-lg shadow-gray-400 px-4 py-2;
+  }
+  .icon-hidden{
+    @apply hidden;
   }
 }

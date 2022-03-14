@@ -475,6 +475,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
+@media (min-width: 640px) {
+
+  .slider-btn {
+    height: 1rem;
+  }
+
+  .slider-btn {
+    width: 1rem;
+  }
+}
+.btn-download {
+  border-radius: 0.25rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(186 230 253 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: #9ca3af;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+.btn-download:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(125 211 252 / var(--tw-bg-opacity));
+}
+.icon-hidden {
+  display: none;
+}
 .relative {
   position: relative;
 }
@@ -484,12 +518,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 .m-4 {
   margin: 1rem;
 }
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 .mr-1 {
   margin-right: 0.25rem;
+}
+.ml-2 {
+  margin-left: 0.5rem;
 }
 .flex {
   display: flex;
@@ -500,6 +541,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-auto {
   height: auto;
 }
+.h-\[60\%\] {
+  height: 60%;
+}
 .w-screen {
   width: 100vw;
 }
@@ -508,6 +552,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-full {
   width: 100%;
+}
+.w-\[75\%\] {
+  width: 75%;
 }
 .w-max {
   width: -webkit-max-content;
