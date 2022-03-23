@@ -5,13 +5,11 @@ $_SESSION['loggedin']=false;
 require_once('inc/header.php');
 
 ?>
-
-  
-  <header class="p-4 h-[80vh] ">
+  <header class="p-4 my-10 sm:my-0 sm:h-[80vh] ">
     <div class="flex flex-wrap p-4 h-full">
       <div class="order-last sm:order-first flex flex-col sm:justify-center sm:w-1/2 sm:ml-6">
         <h2 class="font-medium text-2xl mb-2 ">A Piece of tools in your Pocket</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, fuga, asperiores adipisci maiores eos voluptas in tenetur incidunt natus praesentium saepe omnis expedita hic esse repudiandae quas ea, ex mollitia!</p>
+        <p>Latest Software download. Fix PC issues.<br/>Get your premium tools from here with 20% off<br/>Explore more about tools and software in our Article written by collabators.</p>
       </div>
       <div class="m-auto ">
         <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor"viewBox="0 0 16 16"><path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z"/></svg>
@@ -19,9 +17,9 @@ require_once('inc/header.php');
     </div>
   </header><!-- HEADER ENDS HERE -->
   <hr>
-  <h2 class="text-2xl mt-4 ml-4 font-medium">Features</h2>
+  <h2 class="text-2xl mt-4 ml-4 font-medium">Featured Tool</h2>
   <div id="slider" class="w-full overflow-hidden mb-4">
-    <div id="slides" class="m-4 flex overflow-x-auto snap-mandatory snap-x scroll-smooth [-webkit-overflow-scrolling:touch]">
+    <div id="slides" class="m-4 flex gap-4 overflow-x-auto snap-mandatory snap-x scroll-smooth [-webkit-overflow-scrolling:touch]">
       <div id="slide-1" class="w-[75%]">
         <img class="h-[60%]" src="assets/office.png" alt="ms office">
         <button class="btn-download">Download</button>
@@ -42,4 +40,22 @@ require_once('inc/header.php');
     </div>
   </div>
   <hr><!-- FEATURES ENDS HERE -->
+<h2 class="text-2xl my-4 ml-4 font-medium">Article</h2>
+<article class="flex flex-wrap mt-4 mb-8 mx-auto sm:mx-40 justify-center gap-4">
+  <?php
+  for($i=0; $i<5; $i++){
+    $topicname='Excel';
+    $topicDesc='Excel is a popular spreadsheet system, which organizes data in columns and rows that can be manipulated through formulas';
+    $svg='excel';
+    echo '<div class="w-full sm:w-44 sm:h-auto mx-8 sm:mx-0 py-8 sm:py-4 p-2 border-2 border-gray-500 rounded ">
+      <div class="flex justify-center">'; include('assets/svg/'. $svg .'.svg'); echo '</div>
+      <h3 class="text-center font-medium">'. $topicname .'</h3><br/>
+      <span>'. $topicDesc .'</span>
+      <button class="">... Read more</button>
+    </div>';
+  }
+  ?>
+</article>
+<hr/>
+
 <?php require_once('inc/footer.php') ?>

@@ -1,4 +1,4 @@
 <?php
-define('APPNAME','');
+define('APPNAME','toolhub');
 
 ?>
