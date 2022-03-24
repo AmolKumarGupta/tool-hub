@@ -52,7 +52,7 @@
         <a href=""><li class="py-2 px-2 border-[1px] border-gray-300 rounded sm:border-sky-50 hover:bg-zinc-200 hover:border-sky-900 sm:w-max">Best Products</li></a>
         <?php
         if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==false){
-          echo '<a href=""><li class="py-2 px-2 border-[1px] border-gray-300 rounded sm:border-sky-50 hover:bg-zinc-200 hover:border-sky-900">Login</li></a>';
+          echo '<a href="login.php"><li class="py-2 px-2 border-[1px] border-gray-300 rounded sm:border-sky-50 hover:bg-zinc-200 hover:border-sky-900">Login</li></a>';
         }else{
           echo '<a href=""><li class="py-2 px-2 border-[1px] border-gray-300 rounded sm:border-sky-50 hover:bg-zinc-200 hover:border-sky-900">Logout</li></a>';
         }

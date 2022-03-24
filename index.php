@@ -1,8 +1,7 @@
 <?php
-require_once('init.php');
 session_start();
+require_once('init.php');
 $_SESSION['loggedin']=false;
-require_once('inc/header.php');
 
 ?>
   <header class="p-4 my-10 sm:my-0 sm:h-[80vh] ">
