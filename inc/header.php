@@ -47,14 +47,14 @@
     <div id="navItems" class="hidden w-screen sm:block sm:mr-4 text-center">
       <ul class="text-l sm:flex sm:justify-end sm:gap-1 sm:h-full sm:items-center ">
         <a href="index.php"><li class="py-2 px-2 border-[1px] border-gray-300 rounded sm:border-sky-50 hover:bg-zinc-200 hover:border-sky-900 ">Home</li></a>
-        <a href=""><li class="py-2 px-2 border-[1px] border-gray-300 rounded sm:border-sky-50 hover:bg-zinc-200 hover:border-sky-900">Apps</li></a>
+        <a href="products.php"><li class="py-2 px-2 border-[1px] border-gray-300 rounded sm:border-sky-50 hover:bg-zinc-200 hover:border-sky-900">Apps</li></a>
         <a href=""><li class="py-2 px-2 border-[1px] border-gray-300 rounded sm:border-sky-50 hover:bg-zinc-200 hover:border-sky-900">Articles</li></a>
         <a href=""><li class="py-2 px-2 border-[1px] border-gray-300 rounded sm:border-sky-50 hover:bg-zinc-200 hover:border-sky-900 sm:w-max">Best Products</li></a>
         <?php
-        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==false){
-          echo '<a href="login.php"><li class="py-2 px-2 border-[1px] border-gray-300 rounded sm:border-sky-50 hover:bg-zinc-200 hover:border-sky-900">Login</li></a>';
-        }else{
+        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
           echo '<a href=""><li class="py-2 px-2 border-[1px] border-gray-300 rounded sm:border-sky-50 hover:bg-zinc-200 hover:border-sky-900">Logout</li></a>';
+        }else{
+          echo '<a href="login.php"><li class="py-2 px-2 border-[1px] border-gray-300 rounded sm:border-sky-50 hover:bg-zinc-200 hover:border-sky-900">Login</li></a>';
         }
         ?>
         <a href=""><li class="flex justify-center py-2 px-2 border-[1px] border-gray-300 rounded sm:border-sky-50 hover:bg-zinc-200 hover:border-sky-900"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg></li></a>

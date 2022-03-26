@@ -2,7 +2,7 @@
 require_once('init.php');
 ?>
 <?php
-$data = $user->all();
+$data = $User->all();
 echo $data['id'];
 ?>
 
