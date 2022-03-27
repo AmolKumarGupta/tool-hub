@@ -2,7 +2,7 @@
 namespace App\Controllers;
 use App\Models\Product;
 class Products extends Controller{
-  static $tr = ['id','name','description','short_note','size','price','type','img'];
+  static $tr = ['id','name','description','short_note','size','price','type','img','rating','developer'];
   static $arr = array(
     "id"=>array(),
     "name"=>array(),
@@ -12,6 +12,8 @@ class Products extends Controller{
     "price"=>array(),
     "type"=>array(),
     "img"=>array(),
+    "rating"=>array(),
+    "developer"=>array(),
   );
 
   static function all(){

@@ -13,3 +13,5 @@
     - price
     - type
     - img
+    - rating (decimal(4,1))
+    - developer
