@@ -16,5 +16,6 @@ class Model{
     if(mysqli_num_rows($result)>0){
       return $result;
     }
+    return false;
   }
 }
