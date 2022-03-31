@@ -2,7 +2,7 @@
 namespace App\Controllers;
 use App\Models\Product;
 class Products extends Controller{
-  static $tr = ['id','name','description','short_note','size','price','type','img','rating','developer'];
+  static $tr = ['id','name','description','short_note','size','price','type','img','rating','developer','dwn_link'];
   static $arr = array(
     "id"=>array(),
     "name"=>array(),
@@ -14,6 +14,7 @@ class Products extends Controller{
     "img"=>array(),
     "rating"=>array(),
     "developer"=>array(),
+    "dwn_link"=>array(),
   );
 
   static function all(){
@@ -28,5 +29,19 @@ class Products extends Controller{
     }
     return $arr;
   }
+  static function where($col, $oper, $val){
+    global $db;
+    $obj = new Product($db);
+    $res = $obj->where($col, $oper,$val);
+    $arr = self::$arr;
+    while($row=mysqli_fetch_assoc($res)){
+      foreach(self::$tr as $i){
+        array_push($arr[$i],$row[$i]);
+      }
+    }
+    return $arr;
+  }
+
+  
 }
 ?>

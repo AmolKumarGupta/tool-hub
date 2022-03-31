@@ -24,7 +24,7 @@
 
 
 <footer class="flex flex-col items-center py-10 px-auto sm:px-10">
-  <p>&#169 Amol Kumar Gupta Inc.</p>
+  <p>&#169 Amol & His Teams Inc.</p>
   <p> All rights reserved.</p>
   <p>Privacy Policy</p>
 </footer>
