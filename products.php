@@ -14,9 +14,12 @@ use Helper\FIlter\Filter;
       <div class="h-[25px] m-1">
         <span id="App-filter-cross" class="absolute right-4 cursor-default">&#9587</span>
       </div>
-      <div class="flex flex-wrap gap-2 ">
-        <div class="w-fit px-2 py-1 border-[1px] border-gray-500 rounded-2xl"><a href="?p=0">free</a></div>
-        <div class="w-fit px-2 py-1 border-[1px] border-gray-500 rounded-2xl"><a href="?p=1">paid</a></div>
+      <div class="flex flex-wrap gap-2 text-xs">
+        <div class="w-fit px-2 py-1 border-[1px] border-gray-500 hover:border-blue-500 rounded-2xl <?= Filter::checkforcss('p','0'); ?>"><a href="?p=0">free</a></div>
+        <div class="w-fit px-2 py-1 border-[1px] border-gray-500 hover:border-blue-500 rounded-2xl <?= Filter::checkforcss('p','1'); ?>"><a href="?p=1">paid</a></div>
+        <div class="w-fit px-2 py-1 border-[1px] border-gray-500 hover:border-blue-500 rounded-2xl <?= Filter::checkforcss('s','l'); ?>"><a href="?s=l">lowest price</a></div>
+        <div class="w-fit px-2 py-1 border-[1px] border-gray-500 hover:border-blue-500 rounded-2xl <?= Filter::checkforcss('s','h'); ?>"><a href="?s=h">highest price</a></div>
+        <div class="w-fit px-2 py-1 border-[1px] border-gray-500 hover:border-blue-500 rounded-2xl"><a href="?">remove</a></div>
       </div>
     </div>
   </span>
@@ -24,14 +27,16 @@ use Helper\FIlter\Filter;
 <section class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 w-full h-full p-4">
   <?php
   // $arr = Products::all();
-  if($d = Filter::run()){
+  if(isset($_GET['p']) && $d = Filter::run()){
     $arr = Products::where($d[0],$d[1],$d[2]);
+  }elseif(isset($_GET['s']) && $d = Filter::run()){
+    $arr = Products::orderBy($d[0],$d[1]);
   }else{
     $arr = Products::all();
   }
   for($i=0; $i<count($arr['id']); $i++){
     echo '<div class="flex justify-center">
-    <div class="flex flex-col items-center gap-2 w-3/4 sm:w-auto h-60 p-4 border-2 border-gray-500 rounded-xl">
+    <div class="flex flex-col items-center gap-2 w-max sm:w-auto h-full sm:h-60 px-8 sm:px-auto p-4 border-2 border-gray-500 rounded-xl">
     <div class="scale-150 m-6">';
     include($arr['img'][$i]);
     echo '</div>
@@ -46,6 +51,7 @@ use Helper\FIlter\Filter;
   ?>
 </section><!-- SECTION  -->
 <script src="src/js/apps-page.js" defer></script>
+<div id="testing-purpose" class="hidden filter-active"></div>
 <?php
 require_once('inc/footer.php');
 ?>

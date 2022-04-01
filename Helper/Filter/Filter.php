@@ -10,13 +10,25 @@ class Filter{
       }
     }
     elseif(isset($_GET['s'])){
-      return false;
+      if($_GET['s'] == 'l'){
+        return array('price','ASC');
+      }elseif($_GET['s'] == 'h'){
+        return array('price','DESC');
+      }
     }
-    elseif(isset($_GET['s'])){
+    elseif(isset($_GET['c'])){
       return false;
     }
     else{
       return false;
+    }
+  }
+  static function checkforcss($q,$val){
+    if(isset($_GET[$q])){
+      if($_GET[$q]==$val){
+        return "filter-active";
+      }
+      return "";
     }
   }
 }

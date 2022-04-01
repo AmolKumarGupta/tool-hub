@@ -47,4 +47,7 @@
   .icon-hidden{
     @apply hidden;
   }
+  .filter-active{
+    @apply bg-sky-500 text-white;
+  }
 }

@@ -34,4 +34,14 @@ class Model{
     }
     return false;
   }
+  function orderBy($col,$opt){
+    $result = mysqli_query($this->conn,"select * from ". $this->table ." order by ". $col ." ". $opt ."");
+    if(!$result){
+      die("Error in Model : ". mysqli_error($this->conn));
+    }
+    if(mysqli_num_rows($result)>0){
+      return $result;
+    }
+    return false;
+  }
 }
