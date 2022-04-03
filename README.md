@@ -15,3 +15,4 @@
     - img
     - rating (decimal(4,1))
     - developer
+    - dwn_link
