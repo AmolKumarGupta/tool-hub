@@ -18,6 +18,9 @@ class Model{
     }
     return false;
   }
+  /**
+   * 
+   */
   function where($col,$oper,$val){
     $stmt = mysqli_prepare($this->conn,"select * from ". $this->table ." where `$col`". $oper ." ?");
     mysqli_stmt_bind_param($stmt,"d",$val);
@@ -34,6 +37,9 @@ class Model{
     }
     return false;
   }
+  /**
+   * 
+   */
   function orderBy($col,$opt){
     $result = mysqli_query($this->conn,"select * from ". $this->table ." order by ". $col ." ". $opt ."");
     if(!$result){

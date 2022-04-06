@@ -31,5 +31,25 @@ class Filter{
       return "";
     }
   }
+  /**
+   * get filtered data from request
+   * @method data
+   * @param array $arr | may be get or post request
+   * @return array $data | a filtered secured data from request
+   * @see Helper\Filter\Filter::filter_data_coming_from_req()
+   */
+  static function data($arr){
+    $res = array();
+    foreach($arr as $key=>$val){
+      $res[$key] = self::filter_data_coming_from_req($val);
+    }
+    return $res;
+  }
+  static function filter_data_coming_from_req($data){
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
 }
 ?>
