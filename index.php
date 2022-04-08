@@ -1,6 +1,9 @@
 <?php
 require_once('init.php');
 require_once('inc/header.php');
+if(isset($_SESSION['name'])){
+  echo $_SESSION['name'];
+}
 ?>
   <header class="p-4 my-10 sm:my-0 sm:h-[80vh] ">
     <div class="flex flex-wrap p-4 h-full">
