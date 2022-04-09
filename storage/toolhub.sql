@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2022 at 08:58 PM
+-- Generation Time: Apr 09, 2022 at 11:34 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -49,7 +49,11 @@ INSERT INTO `products` (`id`, `name`, `description`, `short_note`, `size`, `pric
 (1, 'Sublime Text', 'Sublime Text is a commercial source code editor. It natively supports many programming languages and markup languages. Users can expand its functionality with plugins, typically community-built and maintained under free-software licenses.', 'Sublime Text is a sophisticated text editor for code, markup and prose', '18.26', 0.00, 'IDE', 'assets/svg/sublime-text.svg', '4.6', 'Sublime HQ', ''),
 (2, 'MS Excel', 'Microsoft Excel is a spreadsheet developed by Microsoft for Windows, macOS, Android and iOS. It features calculation or computation capabilities, graphing tools, pivot tables, and a macro programming language called Visual Basic for Applications.', 'Microsoft Excel is the industry leading spreadsheet software program, a powerful data visualization and analysis tool.', '726.00', 5299.00, 'spreadsheet package', 'assets/svg/excel.svg', '4.7', 'Microsoft Corporation', ''),
 (3, 'XAMPP', 'XAMPP is a free and open-source cross-platform web server solution stack package developed by Apache Friends, consisting mainly of the Apache HTTP Server, MariaDB database, and interpreters for scripts written in the PHP and Perl programming languages.', 'XAMPP is a completely free, easy to install Apache distribution containing MariaDB, PHP, and Perl.', '164.00', 0.00, 'server', 'assets/svg/xampp.svg', '4.6', 'Apache Friends', ''),
-(4, 'Adobe Photoshop', 'Adobe Photoshop is a raster graphics editor developed and published by Adobe Inc. for Windows and macOS. It was originally created in 1988 by Thomas and John Knoll. Since then, the software has become the industry standard not only in raster graphics editing, but in digital art as a whole.', 'Create Beautiful Images, Graphics, Paintings, And 3D Artwork On Your Desktop And iPad. If You Can Dream It', '1260.00', 19158.95, 'designing software', 'assets/svg/photoshop.svg', '4.1', 'Adobe Systems Incorporated', '');
+(4, 'Adobe Photoshop', 'Adobe Photoshop is a raster graphics editor developed and published by Adobe Inc. for Windows and macOS. It was originally created in 1988 by Thomas and John Knoll. Since then, the software has become the industry standard not only in raster graphics editing, but in digital art as a whole.', 'Create Beautiful Images, Graphics, Paintings, And 3D Artwork On Your Desktop And iPad. If You Can Dream It', '1260.00', 19158.95, 'designing software', 'assets/svg/photoshop.svg', '4.1', 'Adobe Systems Incorporated', ''),
+(5, 'Microsoft Office', 'What is MS Office and its uses? Microsoft Office is a suite of applications designed to help with productivity and completing common tasks on a computer. You can create and edit documents containing text and images work with data in spreadsheets and databases and create presentations and posters.', 'Collaborate for free with online versions of Microsoft Word, PowerPoint, Excel, and OneNote. Save documents, workbooks, and presentations online', '1894.40', 4899.00, '', 'assets/svg/office-365.svg', '4.4', 'Microsoft Corporation', 'https://51-75-145-213.xyz/Getintopc.com/Office_Pro_Plus_2021_v2109_Build_14430.20276.rar?md5=jfUjuCXsiztV1vsjnrbzEg&expires=1652075302'),
+(6, 'AnyDesk', 'AnyDesk is a closed source remote desktop application distributed by AnyDesk Software GmbH. The proprietary software program provides platform independent remote access to personal computers and other devices running the host application', 'Access any device at any time. From anywhere. Always secure and fast', '3.65', 0.00, 'Remote Control', 'assets/svg/anydesk.svg', '4.5', 'ANYDESK SOFTWARE GMBH', 'https://dw.uptodown.com/dwn/6OyDApr17aLf_gDTdBElzwQjfCznpw52xowqISuW1U_gCouU4MU3iH84eb0EHBhAWHjiUhRJ9d7xBsrlFxMV4st45BaLnr4I9cctjLTZhzSEQcDdgqYIKCbWs5P_dz7P/1GdX-u3PqQ2IHkzmu_EQ9I7OABwZtIhV431s91Npcvjo2u45XqBfc4tCxlKqQIF7p5YT-Uk109S-DvkGoGBflIQX7FQ7yiiI9gcgYbaIpDV9QQxM2qwBE3KvQLfYawhF/E_ttx-NAq-EYV-J6p1YKVGY-xB3eG4lGh3wMFbREIC15Jdk3khNOtMghnJy_oAYc/'),
+(7, 'WhatsApp Desktop', 'With WhatsApp on the desktop, you can seamlessly sync all of your chats to your computer so that you can chat on whatever device is most convenient to you.', 'With WhatsApp on the desktop, you can seamlessly sync all of your chats to your computer so that you can chat on whatever device is most convenient to you.', '403.08', 0.00, 'social', 'assets/svg/whatsapp.svg', '3.8', 'WhatsApp Inc.', 'https://web.whatsapp.com/desktop/windows/release/x64/WhatsAppSetup.exe'),
+(8, 'sketch', 'a', 'a', '100.00', 0.00, '1', 'assets/sketch.jfif', '0.0', '', '');
 
 -- --------------------------------------------------------
 
@@ -112,7 +116,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`

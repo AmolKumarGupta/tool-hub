@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 06, 2022 at 06:53 AM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 8.0.9
+-- Generation Time: Apr 08, 2022 at 08:58 PM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 7.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -59,7 +59,7 @@ INSERT INTO `products` (`id`, `name`, `description`, `short_note`, `size`, `pric
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `name` varchar(38) NOT NULL,
+  `name` varchar(38) DEFAULT NULL,
   `email` varchar(38) NOT NULL,
   `password` text NOT NULL,
   `bod` date DEFAULT NULL,
@@ -80,7 +80,10 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `bod`, `mobile`, `state`, `city`, `area`, `block`, `st_no`, `h_no`, `landmark`, `created_at`) VALUES
 (1, 'amol', 'amol@amol.com', '1', '2001-03-12', 9999999999, 'punjab', 'ludhiana', 'partap pura', 'd', '2', '234', 'mandir', '0000-00-00 00:00:00'),
-(3, 'amol', 'amol3@amol.com', '1', NULL, 0, '', '', '', '', '', '', '', '2022-03-24 23:10:48');
+(7, 'mohit', 'mohit@amol.com', '$2y$10$esqGepqLde42f6sTf0TWh.Ug0sqXltQSgJetnRNP9ulSC5axiVH3C', '2022-04-07', 1112223333, 'punjab', 'ludhiana', 'mdel town', 'D', '2', '123', 'clock town', '2022-04-07 01:23:16'),
+(8, 'test', 'test@amol.com', '$2y$10$oy30xvGxAMEZXHody5Sns.Zf7xGK909Ds1iLJIJvu5P4efSYs2VEG', '2022-04-30', 987218988, 'assam', 'leh', 'nice', 'no', 'no', 'no', 'no', '2022-04-07 01:35:56'),
+(10, '', '', '$2y$10$KAJ3KvFOVasCdTvcBMJOgeX4HMXonqItlBTI9Y0Y9Wis5M3yRtlay', '0000-00-00', 0, '', '', '', '', '', '', '', '2022-04-08 21:40:14'),
+(13, 'mayank', 'mayank@amol.com', '$2y$10$IgvruSjRLgI5kQ7cmckAZeDFTFOCURu5lT.0d7U5ItZWBo6z1kJjG', '2022-04-04', 1112223333, 'punjab', 'ludhiana', 'arya', 'IT', '1', 'lab3', 'none', '2022-04-09 00:12:17');
 
 --
 -- Indexes for dumped tables
@@ -98,7 +101,8 @@ ALTER TABLE `products`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `name` (`name`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -114,7 +118,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

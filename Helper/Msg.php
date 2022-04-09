@@ -6,9 +6,11 @@ class Msg{
   }
   static function flash($var){
     if( isset($_SESSION[$var]) ){
-      echo $_SESSION[$var];
+      $msg = $_SESSION[$var];
       unset($_SESSION[$var]);
+      return $msg;
     }
+    return false;
   }
 }
 ?>

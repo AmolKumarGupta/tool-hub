@@ -13,8 +13,7 @@ if(isset($_POST['reg'])){
     Users::insert($data);
   }
   else{
-    Msg::set();
-    $_SESSION['user_err'] = "Account Already Exists.";
+    Msg::set('user_err',"Username Already Exists.");
     header("Location:../register.php");
     die();
   }

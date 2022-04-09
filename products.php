@@ -37,11 +37,17 @@ use Helper\FIlter\Filter;
   }
   for($i=0; $i<count($arr['id']); $i++){
     echo '<div class="flex justify-center">
-    <a class="flex flex-col items-center gap-2 w-[69%] sm:w-auto h-full sm:h-60 px-8 sm:px-auto p-4 border-2 border-gray-500 rounded-xl" href="product.php?i='. $arr['id'][$i] .'">
-    <div class="scale-150 m-6">';
-    include($arr['img'][$i]);
+    <a class="flex flex-col items-center gap-2 w-[69%] sm:w-auto h-full sm:h-60 px-8 sm:px-auto p-4 border-2 border-gray-500 rounded-xl" href="product.php?i='. $arr['id'][$i] .'">';
+    if(pathinfo($arr['img'][$i],PATHINFO_EXTENSION)!='svg'){
+      echo '<div class="mx-6 bg-cover">';
+      echo '<img src="'. $arr['img'][$i] .'" alt="products" width="100" height="100" class="">';
+    }else{
+      echo '<div class="scale-150 m-6">';
+      include($arr['img'][$i]);
+    }
+    // echo '<img height="100" width="100" src="'. $arr['img'][$i] .'" alt=""';
     echo '</div>
-    <div class="font-sans font-medium text-xl">'. $arr['name'][$i] .'</div>
+    <div class="font-sans font-medium text-lg">'. $arr['name'][$i] .'</div>
     <div class="flex gap-4 font-serif">
     <div class="flex items-center gap-1"><p>'. $arr['rating'][$i] .'</p> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="text-yellow-500" viewBox="0 0 16 16"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg></div>
     <div class="">'. Button::check($arr['price'][$i],$arr['size'][$i]) .'</div>

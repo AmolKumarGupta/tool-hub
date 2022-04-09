@@ -2,6 +2,7 @@
 require_once("../init.php");
 use App\Controllers\Users;
 use Helper\Filter\Filter;
+use Helper\Msg;
 //verification goes here
 
 //logging in 
@@ -12,12 +13,14 @@ if(isset($_POST['log'])){
     if(password_verify($data['password'], $cnt['password'][0])){
       $_SESSION['name']=$cnt['name'][0];
     }else{
-      $_SESSION['user_err'] = "Password do not match";
+      Msg::set('user_err','Password do not match');
+      // $_SESSION['user_err'] = "Password do not match";
       header("Location:../login.php");
       die();
     }
   }else{
-    $_SESSION['user_err'] = "No Account exist with this name";
+    Msg::set('user_err','No Account exist with this name');
+    // $_SESSION['user_err'] = "No Account exist with this name";
     header("Location:../login.php");
     die();
   }

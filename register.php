@@ -7,43 +7,83 @@ if(isset($_SESSION['name'])){
 require_once('inc/header.php');
 use Helper\Msg;
 ?>
-<div class="">
+<div class="w-fit mx-auto my-20">
+	<div class="text-center text-2xl font-bold my-2">
+		<h2>Register</h2>
+	</div>
 	<?php
-	Msg::flash('user_err');
+	if( $msg = Msg::flash('user_err')){
+		echo '<div class="p-2 border-[1px] border-gray-500 rounded bg-red-500 text-sm text-white">'.$msg.'</div>';
+	}
 	?>	
-</div>
-<div class="">
-	<form action="inc/registering.php" method="post">
-		<label for="user">User</label>
-		<input name="name" id="user" type="text" placeholder="Your name" required>
-		<label for="email">Email</label>
-		<input name="email" id="email" type="email" placeholder="Your Email" required>
-		<label for="password">Password</label>
-		<input name="password" id="password" type="password" placeholder="Password" required>
-		<label for="repassword">Re-Password</label>
-		<input name="repassword" id="repassword" type="password" placeholder="Enter password again" required>
-
-		<label for="bod">Date of Birth</label>
-		<input name="bod" id="bod" type="date" placeholder="" required>
-
-		<label for="mobile">Mobile No.</label>
-		<input name="mobile" id="mobile" type="tel" placeholder="111-222-3333" required>
-		<label for="state">State</label>
-		<input name="state" id="state" type="text" placeholder="eg. punjab" title="only chars" required>
-		<label for="city">City</label>
-		<input name="city" id="city" type="text" placeholder="eg. ludhiana" required>
-		<label for="area">Area</label>
-		<input name="area" id="area" type="text" placeholder="eg. model town" required>
-		<label for="block">Block No.</label>
-		<input name="block" id="block" type="text" placeholder="" required>
-		<label for="st_no">Street No.</label>
-		<input name="st_no" id="st_no" type="text" placeholder="" required>
-		<label for="h_no">House No.</label>
-		<input name="h_no" id="h_no" type="text" placeholder="" required>
-		<label for="landmark">Landmark</label>
-		<input name="landmark" id="landmark" type="text" placeholder="" required>
-
-		<input name="reg" type="submit" value="Register">
+	<form action="inc/registering.php" method="post" class="flex flex-col gap-4 my-4">
+		<div class="flex flex-col sm:flex-row gap-4">
+			<div class="">
+				<label for="user">User</label><br>
+				<input name="name" id="user" type="text" placeholder="Your name" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+			</div>
+			<div class="">
+				<label for="email">Email</label><br>
+				<input name="email" id="email" type="email" placeholder="Your Email" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+			</div>
+		</div>
+		<div class="flex flex-col sm:flex-row gap-4">
+			<div class="">
+				<label for="password">Password</label><br>
+				<input name="password" id="password" type="password" placeholder="Password" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+			</div>
+			<div class="">
+				<label for="repassword">Re-Password</label><br>
+				<input name="repassword" id="repassword" type="password" placeholder="Enter password again" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+			</div>
+		</div>
+		<div class="flex flex-col sm:flex-row gap-4">
+			<div class="grow">
+				<label for="bod">Date of Birth</label><br>
+				<input name="bod" id="bod" type="date" placeholder="" class="p-2 w-full border-2 border-blue-300 rounded text-sky-700" required>
+			</div>
+			<div class="">
+				<label for="mobile">Mobile No.</label><br>
+				<input name="mobile" id="mobile" type="tel" placeholder="111-222-3333" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+			</div>
+		</div>
+		<div class="flex flex-col sm:flex-row gap-4">
+			<div class="">
+				<label for="state">State</label><br>
+				<input name="state" id="state" type="text" placeholder="eg. punjab" title="only chars" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+			</div>
+			<div class="">
+				<label for="city">City</label><br>
+				<input name="city" id="city" type="text" placeholder="eg. ludhiana" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+			</div>
+		</div>
+		<div class="flex flex-col sm:flex-row gap-4">
+			<div class="">
+				<label for="area">Area</label><br>
+				<input name="area" id="area" type="text" placeholder="eg. model town" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+			</div>
+			<div class="">
+				<label for="block">Block No.</label><br>
+				<input name="block" id="block" type="text" placeholder="" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+			</div>
+		</div>
+		<div class="flex flex-col sm:flex-row gap-4">
+			<div class="">
+				<label for="st_no">Street No.</label><br>
+				<input name="st_no" id="st_no" type="text" placeholder="" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+			</div>
+			<div class="">
+				<label for="h_no">House No.</label><br>
+				<input name="h_no" id="h_no" type="text" placeholder="" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+			</div>
+		</div>
+		<div class="mx-auto">
+			<label for="landmark">Landmark</label><br>
+			<input name="landmark" id="landmark" type="text" placeholder="" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+		</div>
+		<div class="">
+			<input name="reg" type="submit" value="Create" class="float-right p-2 rounded bg-blue-500 text-white shadow-none hover:bg-blue-600 hover:shadow-xl">
+		</div>
 	</form>
 </div>
 <?php
