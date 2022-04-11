@@ -12,6 +12,7 @@ if(isset($_POST['log'])){
   if($cnt){
     if(password_verify($data['password'], $cnt['password'][0])){
       $_SESSION['name']=$cnt['name'][0];
+      $_SESSION['id']=$cnt['id'][0];
     }else{
       Msg::set('user_err','Password do not match');
       // $_SESSION['user_err'] = "Password do not match";

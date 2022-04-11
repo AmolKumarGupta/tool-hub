@@ -36,7 +36,7 @@ use Helper\FIlter\Filter;
     $arr = Products::all();
   }
   for($i=0; $i<count($arr['id']); $i++){
-    echo '<div class="flex justify-center">
+    echo '<div class="flex justify-center h-60">
     <a class="flex flex-col items-center gap-2 w-[69%] sm:w-auto h-full sm:h-60 px-8 sm:px-auto p-4 border-2 border-gray-500 rounded-xl" href="product.php?i='. $arr['id'][$i] .'">';
     if(pathinfo($arr['img'][$i],PATHINFO_EXTENSION)!='svg'){
       echo '<div class="mx-6 bg-cover">';
