@@ -28,8 +28,7 @@ class Products extends Controller{
    * it is a normal method to get data from database with columns as index
    */
   static function all(){
-    global $db;
-    $obj = new Product($db);
+    $obj = self::make();
     $res = $obj->all();
     return self::get($res,self::$arr,self::$tr);
   }
@@ -42,8 +41,7 @@ class Products extends Controller{
    * Get data for specific column 
    */
   static function where($col, $oper, $val){
-    global $db;
-    $obj = new Product($db);
+    $obj = self::make();
     $res = $obj->where($col, $oper,$val);
     return self::get($res,self::$arr,self::$tr);
   }
@@ -55,11 +53,13 @@ class Products extends Controller{
    * Get data in a Ordered way  
    */
   static function orderBy($col,$opt){
-    global $db;
-    $obj = new Product($db);
+    $obj = self::make();
     $res = $obj->orderBy($col,$opt);
     return self::get($res,self::$arr,self::$tr);
   }
-  
+  static function make(){
+    global $db;
+    return (new Product($db));
+  }
 }
 ?>

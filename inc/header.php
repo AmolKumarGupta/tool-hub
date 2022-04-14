@@ -10,9 +10,9 @@
 	<meta name="keywords" content="">
 	<meta name="theme-color" content=""/>
 	<link rel="canonical" href=""/>
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?= PATH ?>/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?= PATH ?>/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?= PATH ?>/assets/favicon/favicon-16x16.png">
 	<!-- <link rel="manifest" href="assets/favicon/site.webmanifest"> -->
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="">
@@ -26,8 +26,8 @@
 	<meta property="twitter:title" content="">
 	<meta property="twitter:description" content="">
 	<meta property="twitter:image" content="">
-  <link rel="stylesheet" href="dist/style.css">
-  <script src="src/js/index.js" defer></script>
+  <link rel="stylesheet" href="<?= PATH ?>/dist/style.css">
+  <script src="<?= PATH ?>/src/js/index.js" defer></script>
 </head>
 <body>
 <nav class="relative bg-sky-50 sm:flex border-[1px] border-gray-200 z-10">

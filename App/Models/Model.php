@@ -22,8 +22,8 @@ class Model{
    * 
    */
   function where($col,$oper,$val){
-    $stmt = mysqli_prepare($this->conn,"select * from ". $this->table ." where `$col`". $oper ." ?");
-    mysqli_stmt_bind_param($stmt,"d",$val);
+    $stmt = mysqli_prepare($this->conn,"select * from ". $this->table ." where `$col` ".$oper." ? ");
+    mysqli_stmt_bind_param($stmt,"s",$val);
     if(!$stmt){
       echo "error in stmt :". mysqli_error($this->conn);
     }
@@ -40,7 +40,7 @@ class Model{
   /**
    * 
    */
-  function orderBy($col,$opt){
+  function orderBy($col,$opt='ASC'){
     $result = mysqli_query($this->conn,"select * from ". $this->table ." order by ". $col ." ". $opt ."");
     if(!$result){
       die("Error in Model : ". mysqli_error($this->conn));
@@ -49,5 +49,25 @@ class Model{
       return $result;
     }
     return false;
+  }
+  /**
+   * Update data for all 
+   */
+  function update($col,$val){
+    $stmt = mysqli_prepare( $this->conn,"update ". $this->table ." set `$col` = ? where id = ? ");
+    if(!$stmt){
+      echo "error in stmt1 :". mysqli_error($this->conn);
+      die();
+    }
+    mysqli_stmt_bind_param($stmt,'ss',$val,$_SESSION['id']);
+    if(!$stmt){
+      echo "error in stmt2 :". mysqli_error($this->conn);
+      die();
+    }
+    $result = mysqli_stmt_execute($stmt);
+    if(!$result){
+      die("Error in Model : ". mysqli_error($this->conn));
+    }
+    return true;
   }
 } 

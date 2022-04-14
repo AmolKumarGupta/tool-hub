@@ -31,10 +31,20 @@ class Users extends Controller{
    * @return array $res 
    */
   static function all(){
-    global $db;
-    $obj = new User($db);
+    $obj = self::make();
     $res = $obj->all();
     return self::get($res,self::$arr,self::$tr);
+  }
+  /**
+   * Insert Assocative Array into database table
+   * @method insert
+   * @param array $arr
+   * @return boolean $res
+   */
+  static function insert($arr){
+    $obj = self::make();
+    $res = $obj->insert($arr);
+    return $res;
   }
   /**
    * Get data for specific column 
@@ -45,8 +55,7 @@ class Users extends Controller{
    * @return array $res
    */
   static function where($col, $oper, $val){
-    global $db;
-    $obj = new User($db);
+    $obj = self::make();
     $res = $obj->where($col, $oper,$val);
     return self::get($res,self::$arr,self::$tr);
   }
@@ -58,11 +67,21 @@ class Users extends Controller{
    * @return array $res
    */
   static function orderBy($col,$opt){
-    global $db;
-    $obj = new User($db);
+    $obj = self::make();
     $res = $obj->orderBy($col,$opt);
     return self::get($res,self::$arr,self::$tr);
   }
-  
+  /**
+   * update data
+   * 
+   */
+  static function update($col,$val){
+    $obj = self::make();
+    $res = $obj->update($col,$val);
+  }
+  static function make(){
+    global $db;
+    return (new User($db));
+  }
 }
 ?>

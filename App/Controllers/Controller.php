@@ -1,7 +1,6 @@
 <?php
 namespace App\Controllers;
 use App\Models\User;
-use App\Models\Product;
 class Controller{
   /**
    * fetch data from given query, can be used in all select query
@@ -21,18 +20,6 @@ class Controller{
       }
     }
     return $arr;
-  }
-  /**
-   * Insert Assocative Array into database table
-   * @method insert
-   * @param array $arr
-   * @return boolean $res
-   */
-  static function insert($arr){
-    global $db;
-    $obj = new User($db);
-    $res = $obj->insert($arr);
-    return $res;
   }
 }
 ?>
