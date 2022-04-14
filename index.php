@@ -2,7 +2,7 @@
 require_once('init.php');
 require_once('inc/header.php');
 ?>
-  <header class="p-4 my-10 sm:my-0 sm:h-[80vh] ">
+  <header class="p-4 my-10 sm:my-0 sm:h-[80vh]">
     <div class="flex flex-wrap p-4 h-full">
       <div class="order-last sm:order-first flex flex-col sm:justify-center sm:w-1/2 sm:ml-6">
         <h2 class="font-medium text-2xl mb-2 ">A Piece of tools in your Pocket</h2>
