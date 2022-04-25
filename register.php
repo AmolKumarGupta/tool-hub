@@ -20,7 +20,7 @@ use Helper\Msg;
 		<div class="flex flex-col sm:flex-row gap-4">
 			<div class="">
 				<label for="user">User</label><br>
-				<input name="name" id="user" type="text" placeholder="Your name" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+				<input name="name" id="user" type="text" placeholder="Your name" pattern="^[a-zA-Z]+[a-zA-Z0-9]+$" title="start with chars, no spaces & more than 2 chars" maxlength="30" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
 			</div>
 			<div class="">
 				<label for="email">Email</label><br>
@@ -30,11 +30,11 @@ use Helper\Msg;
 		<div class="flex flex-col sm:flex-row gap-4">
 			<div class="">
 				<label for="password">Password</label><br>
-				<input name="password" id="password" type="password" placeholder="Password" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+				<input name="password" id="password" type="password" placeholder="Password" maxlength="8" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
 			</div>
 			<div class="">
 				<label for="repassword">Re-Password</label><br>
-				<input name="repassword" id="repassword" type="password" placeholder="Enter password again" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+				<input name="repassword" id="repassword" type="password" placeholder="Enter password again" maxlength="8" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
 			</div>
 		</div>
 		<div class="flex flex-col sm:flex-row gap-4">
@@ -44,7 +44,7 @@ use Helper\Msg;
 			</div>
 			<div class="">
 				<label for="mobile">Mobile No.</label><br>
-				<input name="mobile" id="mobile" type="tel" placeholder="111-222-3333" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+				<input name="mobile" id="mobile" type="tel" placeholder="111-222-3333" maxlength="10" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
 			</div>
 		</div>
 		<div class="flex flex-col sm:flex-row gap-4">

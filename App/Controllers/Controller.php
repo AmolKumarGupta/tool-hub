@@ -1,6 +1,5 @@
 <?php
 namespace App\Controllers;
-use App\Models\User;
 class Controller{
   /**
    * fetch data from given query, can be used in all select query
@@ -20,6 +19,61 @@ class Controller{
       }
     }
     return $arr;
+  }
+  /**
+   * @method all
+   * @return array $res 
+   * it is a normal method to get data from database with columns as index
+   */
+  static function all(){
+    $obj = static::make();
+    $res = $obj->all();
+    return static::get($res,static::$arr,static::$tr);
+  }
+  /**
+   * @method where
+   * @param string $col
+   * @param string $oper  
+   * @param string $val
+   * @return array $res
+   * Get data for specific column 
+   */
+  static function where($col, $oper, $val){
+    $obj = static::make();
+    $res = $obj->where($col, $oper,$val);
+    return static::get($res,static::$arr,static::$tr);
+  }
+  
+  /**
+   * @method orderBy
+   * @param string $col ,any table column
+   * @param string $opt ,ASC or DESC
+   * @return array $res
+   * Get data in a Ordered way  
+   */
+  static function orderBy($col,$opt){
+    $obj = static::make();
+    $res = $obj->orderBy($col,$opt);
+    return static::get($res,static::$arr,static::$tr);
+  }
+  /**
+   * Insert Assocative Array into database table
+   * @method insert
+   * @param array $arr
+   * @return boolean $res
+   */
+  static function insert($arr){
+    $obj = static::make();
+    $res = $obj->insert($arr);
+    return $res;
+  }
+  /**
+   * update data
+   * 
+   */
+  static function update($col,$val){
+    $obj = static::make();
+    $res = $obj->update($col,$val);
   }
 }
 ?>
