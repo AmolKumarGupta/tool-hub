@@ -55,10 +55,10 @@
           // echo '<a href="'. PATH . '/logout.php"><li class="py-2 px-2 border-[1px] border-gray-300 rounded sm:border-sky-50 hover:bg-zinc-200 hover:border-sky-900">Logout</li></a>';
           echo '<a class=""><li class="py-2 px-2 border-[1px] border-gray-300 dark:border-gray-500 rounded sm:border-sky-50 dark:sm:border-gray-700 hover:bg-zinc-200 dark:hover:bg-gray-600 hover:border-sky-900">
               <div class="group relative inline-block w-full h-full">
-                <button>'. $name .'</button>
+                <button id="username">'. $name .'</button>
                 <div class="hidden group-hover:block absolute top-6 right-0 w-full sm:min-w-[120px] py-2 space-y-1 z-1 bg-sky-50 dark:bg-gray-600 border-2 border-gray-200 dark:border-gray-500 rounded">
                   <a href="'. PATH .'/user/profile.php" class="block">Profile</a><hr>
-                  <a href="" class="block">Setting</a><hr>
+                  <a href="'. PATH .'/user/setting.php" class="block">Setting</a><hr>
                   <a href="'. PATH .'/logout.php" class="block">Logout</a>
                 </div>
               </div>
