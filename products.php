@@ -11,11 +11,11 @@ use Helper\FIlter\Filter;
     <div id="App-filter-heading" class="cursor-default active:text-red-100">
       filter
     </div>
-    <div id="App-filter-div" class="hidden absolute right-0 z-[100] min-h-[200px] min-w-[200px] max-w-[250px] border-[1px] border-gray-500 rounded-lg p-4 m-2 shadow-2xl shadow-slate-700 bg-[#fcf8f8fc]">
+    <div id="App-filter-div" class="hidden absolute right-0 z-[100] min-h-[200px] min-w-[200px] max-w-[250px] dark:bg-gray-900 border-[1px] border-gray-500 rounded-lg p-4 m-2 shadow-2xl shadow-slate-700 bg-[#fcf8f8fc]">
       <div class="h-[25px] m-1">
         <span id="App-filter-cross" class="absolute right-4 cursor-default">&#9587</span>
       </div>
-      <div class="flex flex-wrap gap-2 text-xs">
+      <div class="flex flex-wrap gap-2 text-xs dark:text-gray-500 ">
         <div class="w-fit px-2 py-1 border-[1px] border-gray-500 hover:border-2 hover:border-blue-500 rounded-2xl <?= Filter::checkforcss('p','0'); ?>"><a href="?p=0">free</a></div>
         <div class="w-fit px-2 py-1 border-[1px] border-gray-500 hover:border-2 hover:border-blue-500 rounded-2xl <?= Filter::checkforcss('p','1'); ?>"><a href="?p=1">paid</a></div>
         <div class="w-fit px-2 py-1 border-[1px] border-gray-500 hover:border-2 hover:border-blue-500 rounded-2xl <?= Filter::checkforcss('s','l'); ?>"><a href="?s=l">lowest price</a></div>
@@ -36,7 +36,7 @@ use Helper\FIlter\Filter;
     $arr = Products::all();
   }
   for($i=0; $i<count($arr['id']); $i++){
-    echo '<div class="flex justify-center h-60">
+    echo '<div class="flex justify-center h-60 overflow-clip">
     <a class="flex flex-col items-center gap-2 w-[69%] sm:w-auto h-full sm:h-60 px-8 sm:px-auto p-4 border-2 border-gray-500 rounded-xl" href="product.php?i='. $arr['id'][$i] .'">';
     if(pathinfo($arr['img'][$i],PATHINFO_EXTENSION)!='svg'){
       echo '<div class="mx-6 bg-cover">';

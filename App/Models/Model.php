@@ -70,4 +70,11 @@ class Model{
     }
     return true;
   }
+  function delete($col,$val){
+    $result = mysqli_query($this->conn,"DELETE FROM ". $this->table ." WHERE ". $col ." = ". $val);
+    if(!$result){
+      die("Error in Model : ". mysqli_error($this->conn));
+    }
+    return true;
+  }
 } 
