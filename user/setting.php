@@ -16,7 +16,7 @@ $arr = Users::where('id','=',$id);
 	<a href="update.php">
 		<div class="border-2 border-gray-500 rounded-lg p-2 shadow-gray-500 shadow-md hover:shadow-gray-800">Update Info</div>
 	</a>
-	<a href="">
+	<a href="password.php">
 		<div class="border-2 border-gray-500 rounded-lg p-2 shadow-gray-500 shadow-md hover:shadow-gray-800">Change Password</div>
 	</a>
 	<a class="border-2 border-gray-500 rounded-lg p-2 shadow-gray-500 shadow-md hover:shadow-gray-800">

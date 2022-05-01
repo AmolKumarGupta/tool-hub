@@ -44,7 +44,7 @@ use Helper\Msg;
 			</div>
 			<div class="">
 				<label for="mobile">Mobile No.</label><br>
-				<input name="mobile" id="mobile" type="tel" placeholder="111-222-3333" maxlength="10" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
+				<input name="mobile" id="mobile" type="tel" placeholder="111-222-3333" maxlength="10" pattern="^[0-9]+$" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
 			</div>
 		</div>
 		<div class="flex flex-col sm:flex-row gap-4">

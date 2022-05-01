@@ -1,10 +1,12 @@
 document.getElementById('btn').addEventListener('click', function(){
-  str='';
-  inp = document.getElementsByTagName('input');
-  for (i=0; i<inp.length; i++) {
-    str += inp[i].getAttribute('name')+'='+inp[i].value+'&';
-  }
-  var xmlhttp = new XMLHttpRequest();
+  document.querySelector('#form').addEventListener('submit', function(e){
+    e.preventDefault();
+    str='';
+    inp = document.getElementsByTagName('input');
+    for (i=0; i<inp.length; i++) {
+      str += inp[i].getAttribute('name')+'='+inp[i].value+'&';
+    }
+    var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         res = this.responseText
@@ -16,4 +18,5 @@ document.getElementById('btn').addEventListener('click', function(){
     };
     xmlhttp.open("GET","updateUser.php?"+str,true);
     xmlhttp.send();
+  });
 });
