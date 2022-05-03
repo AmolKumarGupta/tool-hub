@@ -54,5 +54,5 @@ require_once('inc/header.php');
   ?>
 </article>
 <hr/>
-
+<script src="<?= PATH ?>/src/js/notify.js" defer></script>
 <?php require_once('inc/footer.php') ?>
