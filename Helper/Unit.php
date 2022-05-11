@@ -7,7 +7,7 @@ class Unit{
       $size = (int)$size;
     }
     if($size >= 1024){
-      return $size . " GB";
+      return number_format($size/1024,2) . " GB";
     }
     return $size . " MB";
   }

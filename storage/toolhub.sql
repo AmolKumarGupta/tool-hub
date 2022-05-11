@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 09, 2022 at 11:34 PM
+-- Generation Time: May 12, 2022 at 12:50 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `toolhub`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `auth_dist`
+--
+
+CREATE TABLE `auth_dist` (
+  `id` int(38) NOT NULL,
+  `user_id` int(38) NOT NULL,
+  `product_id` int(38) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `auth_dist`
+--
+
+INSERT INTO `auth_dist` (`id`, `user_id`, `product_id`, `created_at`) VALUES
+(2, 1, 1, '0000-00-00 00:00:00'),
+(3, 1, 0, '2022-05-12 02:57:02'),
+(5, 1, 100, '2022-05-12 03:33:31'),
+(6, 19, 2, '2022-05-12 03:53:51'),
+(7, 23, 4, '2022-05-12 04:18:32');
 
 -- --------------------------------------------------------
 
@@ -85,13 +109,23 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `bod`, `mobile`, `state`, `city`, `area`, `block`, `st_no`, `h_no`, `landmark`, `created_at`) VALUES
 (1, 'amol', 'amol@amol.com', '1', '2001-03-12', 9999999999, 'punjab', 'ludhiana', 'partap pura', 'd', '2', '234', 'mandir', '0000-00-00 00:00:00'),
 (7, 'mohit', 'mohit@amol.com', '$2y$10$esqGepqLde42f6sTf0TWh.Ug0sqXltQSgJetnRNP9ulSC5axiVH3C', '2022-04-07', 1112223333, 'punjab', 'ludhiana', 'mdel town', 'D', '2', '123', 'clock town', '2022-04-07 01:23:16'),
-(8, 'test', 'test@amol.com', '$2y$10$oy30xvGxAMEZXHody5Sns.Zf7xGK909Ds1iLJIJvu5P4efSYs2VEG', '2022-04-30', 987218988, 'assam', 'leh', 'nice', 'no', 'no', 'no', 'no', '2022-04-07 01:35:56'),
-(10, '', '', '$2y$10$KAJ3KvFOVasCdTvcBMJOgeX4HMXonqItlBTI9Y0Y9Wis5M3yRtlay', '0000-00-00', 0, '', '', '', '', '', '', '', '2022-04-08 21:40:14'),
-(13, 'mayank', 'mayank@amol.com', '$2y$10$IgvruSjRLgI5kQ7cmckAZeDFTFOCURu5lT.0d7U5ItZWBo6z1kJjG', '2022-04-04', 1112223333, 'punjab', 'ludhiana', 'arya', 'IT', '1', 'lab3', 'none', '2022-04-09 00:12:17');
+(8, 'test', 'test@gmail.com', '$2y$10$oy30xvGxAMEZXHody5Sns.Zf7xGK909Ds1iLJIJvu5P4efSYs2VEG', '2022-04-30', 987218988, 'leh', 'ladakh', 'meadow', '67', '102', '346', 'temple', '2022-04-07 01:35:56'),
+(13, 'mayank', 'mayank@amol.com', '$2y$10$IgvruSjRLgI5kQ7cmckAZeDFTFOCURu5lT.0d7U5ItZWBo6z1kJjG', '2022-04-04', 1112223333, 'punjab', 'ludhiana', 'arya', 'IT', '1', 'lab3', 'Dandi swami', '2022-04-09 00:12:17'),
+(14, 'john', 'john@amol.com', '$2y$10$ZIxG52wHX75vpFn/v8jQQ.VBhg0QC6RCXmXJ8Ll9YdReqdu.RG3eK', '2022-04-14', 4567891230, 'pun', 'liu', 'jk', '1', 'j', '23', 'shop', '2022-04-14 11:29:07'),
+(15, 'YasirKhan', 'yasir@mail.com', '$2y$10$nY3uCqJAXHWFpWAmusp5I.dR8VsD3rLq8JVkuUo7XI16oQZsTkrbK', '2022-04-25', 9875526341, 'Punjab', 'Hoshiyar', 'Model Town, Kashor nagar', 'A', '238', '607-a', 'Near R.D. mall', '2022-04-25 23:59:24'),
+(19, 'rahul', 'rahul@gmail.com', '$2y$10$9jFcdHg/YWhRAXa3iU.6ue8VNc4SHNY.cLP2Zw1rUSr6.So5Syqvi', '2019-06-18', 8565359874, 'punjab', 'ludhiana', 'civil lines', '12', '23', '145', 'near Arya College', '2022-04-26 00:44:10'),
+(23, 'karan', 'karan@ncc.com', '$2y$10$YkozzQQZcSSMIuSkqXYn3e9okhyd1YTaOEcYH8j9/j9tQAVwg12NW', '2022-05-01', 7894651230, 'punjab', 'ludhiana', 'model tow', 'E', '342', '420', 'mitra da dabba', '2022-05-01 15:54:34');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `auth_dist`
+--
+ALTER TABLE `auth_dist`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `user_id` (`user_id`,`product_id`);
 
 --
 -- Indexes for table `products`
@@ -113,6 +147,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `auth_dist`
+--
+ALTER TABLE `auth_dist`
+  MODIFY `id` int(38) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
@@ -122,7 +162,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

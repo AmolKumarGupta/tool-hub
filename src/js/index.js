@@ -32,7 +32,7 @@ document.onkeydown = (e)=>{
     document.querySelector('.dark-mode-icon').click();
   }
   if(isKeyPressed['a'] && isKeyPressed['h'] && isValid){
-    window.location.href = `${config.path}`;
+    window.location.href = `${config.path}/`;
   }
 };
 document.onkeyup = (e)=>{

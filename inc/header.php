@@ -30,7 +30,7 @@
   <script src="<?= PATH ?>/src/js/index.js" defer></script>
 </head>
 <body class="dark:bg-gray-800 dark:text-gray-200">
-<nav class="relative bg-sky-50 dark:bg-gray-700 sm:flex border-[1px] border-gray-200 dark:border-gray-500 z-10">
+<nav class="relative bg-sky-50 dark:bg-gray-700 sm:flex border-[1px] border-gray-200 dark:border-gray-500 z-50">
     <div class="w-screen p-2 flex flex-wrap rounded">
       <div class="grow flex gap-[2px] items-center">
         <div class="dark:text-gray-50">

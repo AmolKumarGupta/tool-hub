@@ -59,7 +59,7 @@ use Helper\FIlter\Filter;
 </section><!-- SECTION  -->
 <hr class="mt-4">
 <div id="testing-purpose" class="hidden filter-active"></div>
-<script src="src/js/apps-page.js" defer></script>
+<script src="<?= PATH ?>/src/js/apps-page.js" defer></script>
 <?php
 require_once('inc/footer.php');
 ?>
