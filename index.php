@@ -37,7 +37,7 @@ require_once('inc/header.php');
     </div>
   </div>
   <hr><!-- FEATURES ENDS HERE -->
-<h2 class="text-2xl my-4 ml-4 font-medium">Article</h2>
+<!-- <h2 class="text-2xl my-4 ml-4 font-medium">Article</h2>
 <article class="flex flex-wrap mt-4 mb-8 mx-auto sm:mx-40 justify-center gap-4">
   <?php
   for($i=0; $i<5; $i++){
@@ -52,7 +52,7 @@ require_once('inc/header.php');
     </div>';
   }
   ?>
-</article>
+</article> -->
 <hr/>
 <script src="<?= PATH ?>/src/js/notify.js" defer></script>
 <?php require_once('inc/footer.php') ?>

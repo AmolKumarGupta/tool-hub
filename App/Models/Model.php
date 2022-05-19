@@ -50,6 +50,13 @@ class Model{
     }
     return false;
   }
+  function count(){
+    $res = mysqli_query($this->conn, 'select count(*) from '. $this->table);
+    if(!$res){
+      die("Error in Model : ". mysqli_error($this->conn));
+    }
+    return $res;
+  }
   /**
    * Update data for all 
    */

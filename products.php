@@ -1,9 +1,33 @@
 <?php
 require_once('init.php');
-require_once('inc/header.php');
 use App\Controllers\Products;
 use Helper\Buyable\Button;
 use Helper\FIlter\Filter;
+
+if(isset($_GET['page'])){
+  $page = $_GET['page'];
+}else{
+  $page=1;
+}
+$page = ($page-1)*LIMIT;
+if(isset($_GET['p']) && $d = Filter::run()){
+  $arr = Products::whereWithLimit($d[0],$d[1],$d[2], $page);
+  $forcount = Products::where($d[0],$d[1],$d[2]);
+  $cnt = count($forcount['id']); 
+}elseif(isset($_GET['s']) && $d = Filter::run()){
+  $arr = Products::orderByWithLimit($d[0],$d[1], $page);
+  $forcount = Products::orderBy($d[0],$d[1]);
+  $cnt = count($forcount['id']); 
+}else{
+  $arr = Products::allWithLimit($page);
+  $cnt = Products::count();
+}
+if(!count($arr['id'])){
+  header('LOCATION: index.php');
+  exit();
+}
+
+require_once('inc/header.php');
 ?>
 <header class="p-4 font-bold">
   <span><a href="">Apps / </a></span>
@@ -27,14 +51,7 @@ use Helper\FIlter\Filter;
 </header><!-- HEADER -->
 <section class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 w-full h-full p-4">
   <?php
-  // $arr = Products::all();
-  if(isset($_GET['p']) && $d = Filter::run()){
-    $arr = Products::where($d[0],$d[1],$d[2]);
-  }elseif(isset($_GET['s']) && $d = Filter::run()){
-    $arr = Products::orderBy($d[0],$d[1]);
-  }else{
-    $arr = Products::all();
-  }
+  
   for($i=0; $i<count($arr['id']); $i++){
     echo '<div class="flex justify-center h-60 overflow-clip">
     <a class="flex flex-col items-center gap-2 w-[69%] sm:w-auto h-full sm:h-60 px-8 sm:px-auto p-4 border-2 border-gray-500 rounded-xl" href="product.php?i='. $arr['id'][$i] .'">';
@@ -58,6 +75,25 @@ use Helper\FIlter\Filter;
   ?>
 </section><!-- SECTION  -->
 <hr class="mt-4">
+<div class="">
+<?php
+
+$total_pages = ceil($cnt/LIMIT);
+$span = '';
+$p = isset($_GET['p'])?'&p='. $_GET['p']:'';
+$s = isset($_GET['s'])?'&s='. $_GET['s']:'';
+for($i=1; $i<=$total_pages; $i++){
+  if($i == $page){
+    $span .= '<span><a href="?page='. $i . $p . $s .'">'. $i .'</a></span>';
+  }else{
+    $span .= '<span><a href="?page='. $i . $p . $s .'">'. $i .'</a></span>';
+  }
+}
+echo $span;
+?>
+</div><!-- PAGINATION ENDS HERE -->
+<hr class="mt-4">
+
 <div id="testing-purpose" class="hidden filter-active"></div>
 <script src="<?= PATH ?>/src/js/apps-page.js" defer></script>
 <?php

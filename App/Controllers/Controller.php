@@ -56,6 +56,11 @@ class Controller{
     $res = $obj->orderBy($col,$opt);
     return static::get($res,static::$arr,static::$tr);
   }
+  static function count(){
+    $obj = static::make();
+    $res = $obj->count();
+    return mysqli_fetch_row($res)[0];
+  }
   /**
    * Insert Assocative Array into database table
    * @method insert

@@ -48,7 +48,7 @@
       <ul class="text-l sm:flex sm:justify-end sm:gap-1 sm:h-full sm:items-center ">
         <a href="<?= PATH ?>/index.php"><li class="py-2 px-2 border-[1px] border-gray-300 dark:border-gray-500 rounded sm:border-sky-50 dark:sm:border-gray-700 hover:bg-zinc-200 dark:hover:bg-gray-600 hover:border-sky-900 ">Home</li></a>
         <a href="<?= PATH ?>/products.php"><li class="py-2 px-2 border-[1px] border-gray-300 dark:border-gray-500 rounded sm:border-sky-50 dark:sm:border-gray-700 hover:bg-zinc-200 dark:hover:bg-gray-600 hover:border-sky-900">Apps</li></a>
-        <a href="<?= PATH ?>/"><li class="py-2 px-2 border-[1px] border-gray-300 dark:border-gray-500 rounded sm:border-sky-50 dark:sm:border-gray-700 hover:bg-zinc-200 dark:hover:bg-gray-600 hover:border-sky-900">Articles</li></a>
+        <!-- <a href="<?= PATH ?>/"><li class="py-2 px-2 border-[1px] border-gray-300 dark:border-gray-500 rounded sm:border-sky-50 dark:sm:border-gray-700 hover:bg-zinc-200 dark:hover:bg-gray-600 hover:border-sky-900">Articles</li></a> -->
         <a href="<?= PATH ?>/"><li class="py-2 px-2 border-[1px] border-gray-300 dark:border-gray-500 rounded sm:border-sky-50 dark:sm:border-gray-700 hover:bg-zinc-200 dark:hover:bg-gray-600 hover:border-sky-900 sm:w-max">Best Products</li></a>
         <?php
         if(isset($_SESSION['name'])){

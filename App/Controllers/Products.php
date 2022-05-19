@@ -14,5 +14,6 @@ class Products extends Controller{
     global $db;
     return (new Product($db));
   }
+  use \Traits\pageLimit;
 }
 ?>
