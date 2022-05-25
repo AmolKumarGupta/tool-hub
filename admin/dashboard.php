@@ -1,6 +1,6 @@
 <?php
 require_once('../init.php');
-if(!isset($_SESSION['name'])){
+if(!isset($_SESSION['role'])){
 	header('Location:../index.php');
 	die();
 }
