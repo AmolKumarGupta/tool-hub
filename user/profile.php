@@ -9,6 +9,8 @@ use App\Controllers\Users;
 $arr = Users::where('id','=',$id);
 ?>
 <main class="flex flex-col items-center p-4">
+	<?php if(isset($_SESSION['role'])  && $_SESSION['role']=='admin'){ ?>
+	<?php } ?>
 	<?php
 	echo '
 	<h1 class="text-2xl font-bold font-serif m-4 text-center">'. ucfirst($arr['name'][0]) .'</h1>
