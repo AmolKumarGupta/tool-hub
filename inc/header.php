@@ -57,8 +57,11 @@
               <div class="group relative inline-block w-full h-full">
                 <button id="username">'. $name .'</button>
                 <div class="hidden group-hover:block absolute top-6 right-0 w-full sm:min-w-[120px] py-2 space-y-1 z-1 bg-sky-50 dark:bg-gray-600 border-2 border-gray-200 dark:border-gray-500 rounded">
-                  <a href="'. PATH .'/user/profile.php" class="block">Profile</a><hr>
-                  <a href="'. PATH .'/user/setting.php" class="block">Setting</a><hr>
+                  <a href="'. PATH .'/user/profile.php" class="block">Profile</a><hr>';
+          if( isset($_SESSION['role']) ){
+            echo '<a href="'. PATH .'/admin/dashboard.php" class="block">Dashboard</a><hr>';
+          }
+          echo    '<a href="'. PATH .'/user/setting.php" class="block">Setting</a><hr>
                   <a href="'. PATH .'/logout.php" class="block">Logout</a>
                 </div>
               </div>
