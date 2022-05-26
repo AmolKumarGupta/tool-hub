@@ -49,6 +49,12 @@ require_once('inc/header.php');
     </div>
   </span>
 </header><!-- HEADER -->
+<style>
+  img{
+    width:150px;
+    height:150px;
+  }
+</style>
 <section class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 w-full h-full p-4">
   <?php
   
