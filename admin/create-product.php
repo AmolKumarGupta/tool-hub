@@ -27,14 +27,14 @@ require_once('../inc/header.php');
 			</div>
 			<div>
 				<h3 class="sm:self-center sm:min-w[100px] flex-1">Size (in MB)</h3>
-				<input name="size" type='text' pattern="^[0-9]+.[0-9]$" value="" class="p-2 border-2 border-gray-500 rounded text-sky-700" required><br>
+				<input name="size" type='text' pattern="^[0-9.]+$" value="" class="p-2 border-2 border-gray-500 rounded text-sky-700" required><br>
 			</div>
     </div>
 		
 		<div class="sm:flex space-y-1 sm:space-y-0 sm:gap-2 sm:min-w-[400px]">
 			<div>
 				<h3 class="sm:self-center sm:min-w[100px] flex-1">Price</h3>
-				<input name="price" type='text' value="" pattern="^[0-9]+.[0-9]$" class="p-2 border-2 border-gray-500 rounded text-sky-700" required><br>
+				<input name="price" type='text' value="" pattern="^[0-9.]+$" class="p-2 border-2 border-gray-500 rounded text-sky-700" required><br>
 			</div>
 			<div>
 			<h3 class="sm:self-center sm:min-w[100px] flex-1">Download link</h3>
@@ -45,7 +45,7 @@ require_once('../inc/header.php');
 		<div class="sm:flex space-y-1 sm:space-y-0 sm:gap-2 sm:min-w-[400px]">
 			<div>
 				<h3 class="sm:self-center sm:min-w[100px] flex-1">Rating</h3>
-				<input name="rating" type='text' value="" pattern="^[0-9]+.[0-9]$" class="p-2 border-2 border-gray-500 rounded text-sky-700" required><br>
+				<input name="rating" type='text' value=""  pattern="^[0-5][.]?[0-9]?$" title="must be in range (0 to 5)" class="p-2 border-2 border-gray-500 rounded text-sky-700" required><br>
 			</div>
 			<div>
 			<h3 class="sm:self-center sm:min-w[100px] flex-1">Developer Name</h3>
