@@ -1,0 +1,364 @@
+1.bluestack
+Last updated:May 13, 2022
+Developer:BlueStacks
+License:Freeware
+OS:Windows/macOS
+File size:1.6 GB
+Downloads:886,408
+User rating:4.3 2280 votes
+desc: BlueStacks is an American technology company known for the BlueStacks App Player and other cloud-based cross-platform products. The BlueStacks App Player allows Android applications to run on PCs running Microsoft Windows and macOS.
+link: https://cloud.bluestacks.com/api/getdownloadnow?platform=win&win_version=10&mac_version=&client_uuid=280e0fed-cf83-42d6-b453-bd2e4b31eeee&app_pkg=&platform_cloud=%257B%2522description%2522%253A%2522Chrome%2520101.0.4951.67%2520on%2520Windows%252010%252064-bit%2522%252C%2522layout%2522%253A%2522Blink%2522%252C%2522manufacturer%2522%253Anull%252C%2522name%2522%253A%2522Chrome%2522%252C%2522prerelease%2522%253Anull%252C%2522product%2522%253Anull%252C%2522ua%2522%253A%2522Mozilla%252F5.0%2520(Windows%2520NT%252010.0%253B%2520Win64%253B%2520x64)%2520AppleWebKit%252F537.36%2520(KHTML%252C%2520like%2520Gecko)%2520Chrome%252F101.0.4951.67%2520Safari%252F537.36%2522%252C%2522version%2522%253A%2522101.0.4951.67%2522%252C%2522os%2522%253A%257B%2522architecture%2522%253A64%252C%2522family%2522%253A%2522Windows%2522%252C%2522version%2522%253A%252210%2522%257D%257D&preferred_lang=en&utm_source=&utm_medium=&gaCookie=&gclid=&clickid=&msclkid=&affiliateId=&offerId=&transaction_id=&aff_sub=&first_landing_page=&referrer=&download_page_referrer=&utm_campaign=bsx-install-button-home-en&exit_utm_campaign=bsx-install-button-home-en&incompatible=false&bluestacks_version=bs5
+
+2.win to usb
+
+Last updated:May 16, 2022
+Developer:Hasleo Software
+License:Freeware
+OS:Windows
+File size:5.6 MB
+Downloads:89,959
+User rating:4.2 69 vote
+dsc: WinToUSB is a tool that allows the installation of a Windows operating system from a removable drive such as a pendrive or an external hard drive.With this program, any user can copy the ISO image of the original CD to the external drive to make it the installation source instead of using a physical disc.This program is a great way to keep the Windows installer on a USB so you can have it with you at all times, or run it from computers that no longer have the CD reader. You only have to copy it onto the removable drive and insert it into any computer.
+link: https://dw.uptodown.com/dwn/Iwj0kjGMIfgqH5nnDIDF_X8kssA2eIdBaK9TIvWGQ1TSE7ddOVoTll8RCvjSpda7KsSRbesuUvZwIVtS-b3PSQVkWry1il4l4W5VFRJza82UO7mxwVTXGB5Z0KAXyan3/a7Ruoc_YnJQGSOwLKDezcMLqRNTx-pz6GUbCyKFvSpegWOkSrrVbayGsOhF0ZymyJwAtyjflsT44AQoEFFbYM20TXiULZ3Dau8wbEv0cKU6qlveRDnuEToGQPynl6Hdb/jmfjm1WKH6z_iVFkS8yGp49VbhQIHmBWIyamNg_zAGLpa5r9pVu_g7zUG1ja9TwI/
+
+3. noxplayer
+Last updated:April 29, 2022
+Developer:Bignox.com
+License:Freeware
+OS:Windows/macOS
+File size:503 MB
+Downloads:156,220
+User rating:4.3 466 votes
+desc: Nox App Player is a powerful Android emulator for Windows. Now your Windows PC can run any of the hundreds of apps originally created just for Android -- the most widely used smartphone operating system in the world.
+link: https://dw.uptodown.com/dwn/Iwj0kjGMIfgqH5nnDIDF_X8kssA2eIdBaK9TIvWGQ1TPqEZATFLVkphRYUwpZ6fgP51ziZMTAjb3qliNsDgds7Zidt7vZyIUUEcUwRcbsO4ghuInU19G5LeOe_BDDWAK/84NJ4c_f97D0nVqCfXAE1XCp7OZ_IWyePjMNGC15cdLaNSuREZbVZHToHlMD9S9z5va-QUz8q3d4LrpvRjGlawIY4wwfMHE43T8yQrLgzssj5RKAOZ-kLKzxSIzszXOq/hgzEKy-BjSdWPQh86j77vJvL2sxW8TOYw61ySAeRFCujZQG8MHejSBvbzorcX7z0zYxmLuZl5mLOUQ8P0HIlSg==/
+
+X 4.memu andriod emulator
+Last updated:April 29, 2022
+Developer:Bignox.com
+License:Freeware
+OS:Windows/macOS
+File size:503 MB
+Downloads:156,220
+User rating:4.3 466 votes
+desc: 
+link: 
+
+
+5.Steam for Windows, Mac, Android & Linux
+Last updated:May 13, 2022
+Developer:Valve
+License:Freeware
+OS:Windows/macOS/Linux/Android
+File size:1.7 MB
+Downloads:300,474
+User rating:4.1 229 votes
+desc: We have thousands of games from Action to Indie and everything in-between. Enjoy exclusive deals, automatic game updates and other great perks.Meet new people, join game groups, form clans, chat in-game and more! With over 100 million potential friends (or enemies), the fun never stops.
+link: https://files01.tchspt.com/temp/SteamSetup.exe
+
+
+X 6.Unity Game Engine 2022.1.0
+
+Last updated:May 10, 2022
+Developer:Unity Technologies
+License:Free to Try
+OS:Windows/macOS
+File size:2.0 GB
+Downloads:154,087
+User rating:4.3 359 votes
+
+X 7.Rockstar Games Launcher 
+Last updated:May 4, 2022
+Developer:Rockstar Games
+License:Freeware
+OS:Windows
+File size:71.2 MB
+Downloads:22,040
+User rating:4.9 8 votes
+
+8.Candy Crush Saga for Android 
+Last updated:May 9, 2022
+Developer:King.com
+License:Freeware
+OS:Android/iOS
+File size:90.4 MB
+Downloads:71,071
+User rating:4.2 98 votes
+desc: Start playing Candy Crush Saga today – a legendary puzzle game loved by millions of players around the world.Switch and match Candies in this tasty puzzle adventure to progress to the next level for that sweet winning feeling! Solve puzzles with quick thinking and smart moves, and be rewarded with delicious rainbow-colored cascades and tasty candy combos! Plan your moves by matching 3 or more candies in a row, using boosters wisely in order to overcome those extra sticky puzzles
+link: https://dw.uptodown.com/dwn/Iwj0kjGMIfgqH5nnDIDF_X8kssA2eIdBaK9TIvWGQ1S2kjROGryCjiI2YROE_ZR2G4rSK83KNsJMCm84XfOB0ykK5w5FzWsJav0oyT6EI6KWAEgd_pMDakyL83d92Eyv/PTFFdBPhB-M61hX1lRcBQ_8_ra3S03ayjVvPzib9e6UZTCJb5J6Impjo26r4TZgHsA9FmsT8h_sb6ccg__FOPX6OdChU2FExNQtWCY0wPuRCBtO8XJ-4nyagI6TF1Y29/x36b2_LqoAsqiMOcAhNO-kXTQn2FovHwQiWr4hjWqDA6Que5kl1pwzeqzlBnNNqGMXcsamwcSQJp1DPagOzpN3Lyg7fpcv1sOSbUbqCm9hg=/
+
+9.Wolfenstein: Enemy Territory
+
+Last updated:May 2, 2022
+Developer:Splash Damage
+License:Freeware
+OS:Windows
+File size:258 MB
+Downloads:5,471
+User rating:4.9 16 votes
+
+10.Among Us 2022.4.19
+
+Last updated:April 21, 2022
+Developer:Innersloth
+License:Freeware
+OS:Android
+File size:202 MB
+Downloads:3,440
+User rating:More votes needed
+
+11.Subway Surfers for Android 2.31.5
+
+Last updated:March 31, 2022
+Developer:Kiloo
+License:Freeware
+OS:Android
+File size:148 MB
+Downloads:7,230
+User rating:4.2 13 votes
+
+12.Minecraft RTX for Windows
+
+Last updated:March 13, 2022
+Developer:Microsoft / Mojang
+License:Freeware
+OS:Windows 10
+File size:17.1 MB
+Downloads:106,100
+User rating:3.9 76 votes
+
+13.RemotePC 7.7.13
+
+Last updated:May 19, 2022
+Developer:IDrive
+License:Free to Try
+OS:Windows/macOS/Linux/Android
+File size:26 MB
+Downloads:1,200
+User rating:More votes needed
+
+14.Transmit for Mac 5.8.6
+
+Last updated:May 19, 2022
+Developer:Panic
+License:Demo
+OS:macOS
+File size:42.0 MB
+Downloads:5,711
+User rating:3 /5 from 5 votes
+
+15.ManyCam 8.0.0.95
+
+Last updated:May 19, 2022
+Developer:Manycam
+License:Freeware
+OS:Windows/macOS
+File size:93.0 MB
+Downloads:51,886
+User rating:4.1 127 votes
+
+16.Reaper 6.58
+
+Last updated:May 19, 2022
+Developer:Cockos Inc
+License:Free to Try
+OS:Windows/macOS
+File size:14.0 MB
+Downloads:25,239
+User rating:4.7 43 votes
+
+17.NVDA 2021.3.5
+
+Last updated:May 19, 2022
+Developer:NV Access
+License:Freeware
+Donate
+OS:Windows
+File size:21.7 MB
+Downloads:820
+User rating:More votes needed
+
+18.ToDoList 8.1.1.1
+
+Last updated:May 19, 2022
+Developer:AbstractSpoon Software
+License:Freeware
+OS:Windows
+File size:2.9 MB
+Downloads:10,667
+User rating:4.7 23 votes
+
+19.FileZilla 3.59.0
+
+Last updated:May 19, 2022
+Developer:Tim Kosse
+License:Freeware
+OS:Windows/macOS/Linux
+File size:11.3 MB
+Downloads:72,114
+User rating:4.7 38 votes
+
+20.Networx 7.0.1
+
+Last updated:May 19, 2022
+Developer:SoftPerfect Research
+License:Free to Try
+Donate Here
+OS:Windows/macOS
+File size:9.8 MB
+Downloads:23,210
+User rating:4.8 163 votes
+
+21.MSI Center 1.0.45.0
+
+Last updated:May 19, 2022
+Developer:MSI
+License:Freeware
+OS:Windows
+File size:442 MB
+Downloads:7,350
+User rating:2.4 12 votes
+
+22.RegCool 1.320
+
+Last updated:May 19, 2022
+Developer:Kurt Zimmermann
+License:Freeware
+OS:Windows
+File size:864 KB
+Downloads:12,268
+User rating:4.2 10 votes
+
+23.VSDC Free Video Editor 7.1.6.406
+
+Last updated:May 18, 2022
+Developer:Flash-Integro
+License:Freeware
+OS:Windows
+File size:97.1 MB
+Downloads:37,752
+User rating:4.4 72 votes
+
+24.Adobe Premiere Pro 2.0
+
+Last updated:January 14, 2013
+Developer:Adobe
+License:Commercial
+OS:Windows
+File size:1.0 GB
+Downloads:272,959
+User rating:4.3 778 votes
+
+25.VideoPad Video Editor 11.56
+
+Last updated:May 16, 2022
+Developer:NCH Software
+License:Freeware
+OS:Windows/macOS/Android/iOS
+File size:5.5 MB
+Downloads:25,425
+User rating:4.4 35 votes
+
+26.Notepad++ 8.4.1
+
+Last updated:May 11, 2022
+Developer:Notepad ++
+License:Freeware
+Donate
+OS:Windows
+File size:4.1 MB
+Downloads:277,726
+User rating:4.5 302 votes
+
+
+27.Sony Vegas Pro 18.0.284
+
+Last updated:August 11, 2020
+Developer:Sony Creative Software
+License:Free to Try
+$599.95
+OS:Windows
+File size:392 MB
+Downloads:341,364
+User rating:4.4 522 votes
+
+28.FreeCAD 0.19.3
+
+Last updated:March 1, 2022
+Developer:FreeCAD
+License:Freeware
+OS:Windows/macOS/Linux
+File size:561 MB
+Downloads:33,832
+User rating:3.6 19 votes
+
+29.LibreCAD 2.1.3
+
+Last updated:January 6, 2021
+Developer:LibreCad Team
+License:Freeware
+OS:Windows/macOS/Linux
+File size:26.6 MB
+Downloads:11,128
+User rating:More votes needed
+
+30.Blender 3.1.1
+
+Last updated:March 30, 2022
+Developer:Blender Foundation
+License:Freeware
+OS:Windows/macOS/Linux
+File size:166 MB
+Downloads:52,401
+User rating:4.7 48 votes
+
+31.V-Ray Benchmark 4.10.07
+
+Last updated:January 14, 2020
+Developer:Chaos Group
+License:Freeware
+OS:Windows/macOS/Linux
+File size:309 MB
+Downloads:18,040
+User rating:4.6 14 votes
+
+32.Maxon Cinema 4D Studio 25.0
+
+Last updated:March 30, 2021
+Developer:Autodesk
+License:Free to Try
+OS:Windows
+File size:2.9 GB
+Downloads:40,739
+User rating:4.2 105 votes
+
+33.OBS Studio 27.2.4
+
+Last updated:March 30, 2022
+Developer:OBS Studio
+License:Freeware
+OS:Windows/macOS/Linux
+File size:112 MB
+Downloads:94,470
+User rating:4.3 78 votes
+
+34.Origin Client 10.5.112
+
+Last updated:April 7, 2022
+Developer:Electronic Arts Inc.
+License:Freeware
+OS:Windows
+File size:228 MB
+Downloads:163,706
+User rating:4 276 votes
+
+35.DaVinci Resolve 17.4.3
+
+Last updated:April 29, 2022
+Developer:BlackMagicDesign
+License:Freeware
+OS:Windows
+File size:2.4 GB
+Downloads:113,160
+User rating:4.2 77 votes
+
+36.
