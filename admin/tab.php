@@ -1,10 +1,10 @@
 <div class="">
-    <nav class="flex flex-col sm:flex-row">
+    <nav class="flex flex-col sm:flex-row sm:justify-center">
         <button class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none text-blue-500 border-b-2 font-medium border-blue-500">
-            Tab 1
+            <a href="<?= PATH ?>/admin/dashboard.php">Dashboard</a>
         </button>
         <button class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
-            Tab 2
+        <a href="<?= PATH ?>/admin/create-product.php">Add Product</a>
         </button>
         <button class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
             Tab 3
