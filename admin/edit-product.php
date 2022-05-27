@@ -11,9 +11,9 @@ require_once('../inc/header.php');
 				width:12.5rem;
 			}
 </style>
-<h1 class="text-2xl font-medium mb-4 mt-6 text-center">Add Products</h1>
+<h1 class="text-2xl font-medium mb-4 mt-6 text-center">Edit Product</h1>
 <main class="flex flex-col items-center p-4">
-<form id="form" action="<?= PATH ?>/admin/postdata.php" method="post" enctype="multipart/form-data">
+<form id="form" action="<?= PATH ?>/admin/editProduct.php" method="post" enctype="multipart/form-data">
   <div class="flex flex-col flex-wrap gap-4">
     <div class="sm:flex space-y-1 sm:space-y-0 sm:gap-2 sm:min-w-[400px]">
 			<div>

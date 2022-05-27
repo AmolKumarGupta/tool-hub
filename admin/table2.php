@@ -1,4 +1,4 @@
-<div class="max-w-2xl mx-auto">
+<div class="max-w-[1440px] w-11/12 mx-auto ">
 	<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
 		<div class="p-4">
 			<label for="table-search" class="sr-only">Search</label>
@@ -18,67 +18,61 @@
 				<thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
 					<tr>
 						<th scope="col" class="p-4">
-							<div class="flex items-center">
-								<input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-								<label for="checkbox-all-search" class="sr-only">checkbox</label>
-							</div>
+							Sno.
 						</th>
 						<th scope="col" class="px-6 py-3">
 							Product name
 						</th>
 						<th scope="col" class="px-6 py-3">
-							Description
+							Description          
 						</th>
-						<th scope="col" class="px-6 py-3">
+						<!-- <th scope="col" class="px-6 py-3">
 							Short note
+						</th> -->
+						<th scope="col" class="px-6 py-3">
+							Size    
 						</th>
 						<th scope="col" class="px-6 py-3">
-							Size
-						</th>
-						<th scope="col" class="px-6 py-3">
-							Price
+							Price   
 						</th>
 						<th scope="col" class="px-6 py-3">
 							Developer
 						</th>
-						<th scope="col" class="px-6 py-3">
+						<!-- <th scope="col" class="px-6 py-3">
 							Download link
-						</th>
+						</th> -->
 						<th scope="col" class="px-6 py-3">
-							<span class="sr-only">Edit</span>
+							Action
 						</th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php
-					use App\Controllers\Products;
+					// use App\Controllers\Products;
 					use Helper\Unit;
 					use Helper\Buyable\Button;
-					$arr = Products::all();
+					// $arr = Products::all();
 					// var_dump($arr);
 					for($i=0; $i<count($arr['id']); $i++){
 					?>
-					<tr
-						class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+					<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
 						<td class="w-4 p-4">
-							<div class="flex items-center">
-								<input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-								<label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-							</div>
+							<?= ( $i+( ($page-1)*LIMIT )+1 ) ?>		
 						</td>
 						<th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
 							<?= $arr['name'][$i] ?>
 						</th>
-						<td class="px-6 py-4">
-						<?= $arr['description'][$i] ?>
+						<?php $actualLength = strlen( $arr['description'][$i] ); ?>
+						<td class="px-6 py-4" <?php if( $actualLength>80 ){ echo 'title="'. $arr['description'][$i] .'"'; } ?> >
+						<?= substr($arr['description'][$i],0,80) ?> <?php if( $actualLength>80 ){ echo '...'; } ?>
 						</td>
-						<td class="px-6 py-4">
+						<!-- <td class="px-6 py-4">
 						<?= $arr['short_note'][$i] ?>
-						</td>
+						</td> -->
 						<td class="px-6 py-4">
 						<?= Unit::getSize($arr['size'][$i]) ?>
 						</td>
-						<td class="px-6 py-4">
+						<td class="px-6 py-4 ">
 						<?php
 							if($arr['price'][$i]>0){
 								echo Button::check($arr['price'][$i], $arr['size'][$i]);
@@ -90,11 +84,14 @@
 						<td class="px-6 py-4">
 						<?= $arr['developer'][$i] ?>
 						</td>
-						<td class="px-6 py-4">
+						<!-- <td class="px-6 py-4 overflow-x-hidden max-w-12">
 						<?= $arr['dwn_link'][$i] ?>
-						</td>
-						<td class="px-6 py-4 text-right">
-							<a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+						</td> -->
+						<td class="px-6 py-4">
+							<div class="flex flex-col items-center gap-2">
+								<a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+								<a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</a>
+							</div>
 						</td>
 					</tr>
 					<?php
@@ -104,5 +101,5 @@
 			</table>
 		</div>
 
-		<script src="https://unpkg.com/flowbite@1.3.4/dist/flowbite.js"></script>
+		<!-- <script src="https://unpkg.com/flowbite@1.3.4/dist/flowbite.js"></script> -->
 	</div>
