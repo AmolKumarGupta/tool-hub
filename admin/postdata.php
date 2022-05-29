@@ -61,9 +61,9 @@ if(isset($_POST['submit'])){
   }
   else{
     Msg::set('err',"Software's name Already Exists.");
-    header("Location: dashboard.php");
+    header("Location: create-product.php");
     die();
   }
 }
-header("Location:../index.php");
+header("Location: dashboard.php");
 ?>

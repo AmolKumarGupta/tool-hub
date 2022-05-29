@@ -89,8 +89,8 @@
 						</td> -->
 						<td class="px-6 py-4">
 							<div class="flex flex-col items-center gap-2">
-								<a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-								<a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</a>
+								<a href="edit-product.php?id=<?= $arr['id'][$i] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+								<a data-id="<?= $arr['id'][$i] ?>" class="delete-btn font-medium text-red-600 dark:text-red-500 hover:underline cursor-pointer">Delete</a>
 							</div>
 						</td>
 					</tr>
@@ -100,6 +100,9 @@
 				</tbody>
 			</table>
 		</div>
-
+		<script>
+			offset = <?= ($page-1)*LIMIT ?>
+		</script>
+		<script src="<?= PATH ?>/src/js/deleteProduct.js" defer></script>
 		<!-- <script src="https://unpkg.com/flowbite@1.3.4/dist/flowbite.js"></script> -->
 	</div>

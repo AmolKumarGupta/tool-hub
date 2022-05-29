@@ -80,6 +80,10 @@ class Controller{
     $obj = static::make();
     $res = $obj->update($col,$val);
   }
+  static function updateById($col, $val, $id){
+    $obj = static::make();
+    $res = $obj->updateById($col, $val, $id);
+  }
   static function deleteById($id){
     $obj = static::make();
     $res = $obj->delete('id',$id);

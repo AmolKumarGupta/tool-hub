@@ -4,7 +4,7 @@ use App\Controllers\Products;
 use Helper\Filter\Filter;
 use Helper\Msg;
 
-if(isset($_POST['submit'])){
+if(isset($_POST['submit']) && !empty($_FILES['image']['name'])){
   $target_dir = dirname(dirname(__FILE__)) . "/assets/uploads/";
   $target_file = $target_dir . basename($_FILES["image"]["name"]);
   $imagelink = 'assets/uploads/'. basename($_FILES["image"]["name"]);
@@ -47,23 +47,30 @@ if(isset($_POST['submit'])){
       die();
     }
   }
+}
 
 
-
-  $_POST['imagelink'] = $imagelink;
+  if( isset($imagelink) ){
+    $_POST['img'] = $imagelink;
+  }else{
+    $_POST['img'] = $_POST['imageifnotuploaded'];
+  }
   // var_dump($_POST);
+  unset($_POST['imageifnotuploaded']);
+  unset($_POST['submit']);
   $data = Filter::data($_POST);
-  var_dump($data);
+  // var_dump($data);
   $cnt = Products::where('name','=',$data['name']);
-  var_dump($cnt);
-  if(!$cnt){
-    Products::insert($data);
+  // var_dump($cnt);
+  if($cnt){
+    foreach($data as $col=>$val){
+      Products::updateById($col, $val, $_GET['id']);
+    }
   }
   else{
     Msg::set('err',"Software's name Already Exists.");
-    header("Location: dashboard.php");
+    header("Location: edit-product.php");
     die();
   }
-}
-header("Location:../index.php");
+header("Location:dashboard.php");
 ?>

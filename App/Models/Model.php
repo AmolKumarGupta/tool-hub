@@ -77,6 +77,23 @@ class Model{
     }
     return true;
   }
+  function updateById($col,$val, $id){
+    $stmt = mysqli_prepare( $this->conn,"update ". $this->table ." set `$col` = ? where id = ? ");
+    if(!$stmt){
+      echo "error in stmt1 :". mysqli_error($this->conn);
+      die();
+    }
+    mysqli_stmt_bind_param($stmt,'ss',$val,$id);
+    if(!$stmt){
+      echo "error in stmt2 :". mysqli_error($this->conn);
+      die();
+    }
+    $result = mysqli_stmt_execute($stmt);
+    if(!$result){
+      die("Error in Model : ". mysqli_error($this->conn));
+    }
+    return true;
+  }
   function delete($col,$val){
     $result = mysqli_query($this->conn,"DELETE FROM ". $this->table ." WHERE ". $col ." = ". $val);
     if(!$result){
