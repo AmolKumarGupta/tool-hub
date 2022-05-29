@@ -1,0 +1,13 @@
+{
+    "name": "amol/toolhub",
+    "description": "B2C e-commerce tools based website",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "amol",
+            "email": "amlo1232001@gmail.com"
+        }
+    ],
+    "require": {}
+}
