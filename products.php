@@ -2,7 +2,7 @@
 require_once('init.php');
 use App\Controllers\Products;
 use Helper\Buyable\Button;
-use Helper\FIlter\Filter;
+use Helper\Filter\Filter;
 
 if(isset($_GET['page'])){
   $page = $_GET['page'];
