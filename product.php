@@ -52,7 +52,7 @@ require_once('inc/header.php');
         echo '<a href="'. $arr['dwn_link'][0] .'" download><button class="p-2 rounded bg-blue-500 text-white shadow-none hover:bg-blue-600 hover:shadow-xl">download</button></a>';
       }else{
         echo '<button id="btn-buy" class="p-2 rounded bg-blue-500 text-white shadow-none hover:bg-blue-600 hover:shadow-xl">Buy &#8377 '. number_format($arr['price'][0],2) .'</button> &nbsp;';
-        echo '<button id="addtocart-section" class="p-2 rounded bg-blue-500 text-white shadow-none hover:bg-blue-600 hover:shadow-xl">Add to Cart</button>';
+        echo '<button id="addtocart-section" data-id="'. $arr['id'][0] .'" class="p-2 rounded bg-blue-500 text-white shadow-none hover:bg-blue-600 hover:shadow-xl">Add to Cart</button>';
       }
       ?>
     </div>
