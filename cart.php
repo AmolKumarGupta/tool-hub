@@ -44,7 +44,7 @@ require_once('inc/header.php');
                 <div>Total</div>
                 <div class="text-blue-600">&#8377 <span id="total-amt"></span></div>
             </div>
-            <button id="btn-cart-buy" class="p-2 rounded bg-blue-500 text-white shadow-none hover:bg-blue-600 hover:shadow-xl">Buy</button>            
+            <button id="btn-cart-buy" class="py-2 px-4 m-4 rounded bg-blue-500 text-white shadow-none hover:bg-blue-600 hover:shadow-xl">Buy</button>            
             <!-- send this data to backend (note: use class 'hidden' to hide this input) -->
             <!-- <div class="flex justify-end">
                 <input type="text" class="border border-black bg-gray-50" />
@@ -65,6 +65,9 @@ require_once('inc/header.php');
         xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             res = this.responseText;
+            if(res == ''){
+                res = '<div class="text-blue-600">No Items Added</div>';
+            }
             document.querySelector('tbody').innerHTML = res;
             run();
         }
@@ -85,7 +88,15 @@ require_once('inc/header.php');
             rows = document.querySelectorAll('.table-rows');
             for(i=0; i < delBtns.length; i++ ){
                 delBtns[i].addEventListener('click',async function(e){
-                    this.parentElement.parentElement.parentElement.remove()
+                    this.parentElement.parentElement.parentElement.remove();
+                    array = JSON.parse(localStorage.getItem('cart'));
+                    // console.log(array.indexOf(4))
+                    index = array.indexOf(this.dataset.id);
+                    // console.log('iindex is  '+index);
+                    if(index !== -1){
+                        array.splice(index,1)
+                    }
+                    localStorage.setItem('cart', JSON.stringify(array));
                     run();
                 });
             }
