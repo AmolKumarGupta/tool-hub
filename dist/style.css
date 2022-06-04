@@ -746,6 +746,9 @@ input[type=number]::-webkit-inner-spin-button,
 .w-\[69\%\] {
   width: 69%;
 }
+.w-\[216px\] {
+  width: 216px;
+}
 .w-11\/12 {
   width: 91.666667%;
 }
@@ -1021,14 +1024,14 @@ input[type=number]::-webkit-inner-spin-button,
 .p-2 {
   padding: 0.5rem;
 }
+.p-8 {
+  padding: 2rem;
+}
 .p-4 {
   padding: 1rem;
 }
 .p-2\.5 {
   padding: 0.625rem;
-}
-.p-8 {
-  padding: 2rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -1581,6 +1584,10 @@ input[type=number]::-webkit-inner-spin-button,
 
   .sm\:w-\[50\%\] {
     width: 50%;
+  }
+
+  .sm\:w-\[216px\] {
+    width: 216px;
   }
 
   .sm\:min-w-\[400px\] {

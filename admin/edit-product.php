@@ -21,7 +21,7 @@ $arr = Products::where('id','=',$_GET['id'])
     <div class="sm:flex space-y-1 sm:space-y-0 sm:gap-2 sm:min-w-[400px]">
 			<div>
 				<h3 class="sm:self-center sm:min-w[100px] flex-1">Name</h3>
-				<input name="name" type='text' value="<?= $arr['name'][0] ?>" pattern="^[a-zA-Z]+[a-zA-Z0-9]+$" title="start with chars, no spaces & more than 2 chars" maxlength="30" class="p-2 border-2 border-gray-500 rounded text-sky-700" required><br>
+				<input name="name" type='text' value="<?= $arr['name'][0] ?>" pattern="^[a-zA-Z]+[a-zA-Z0-9 ]+$" title="start with chars, no spaces & more than 2 chars" maxlength="30" class="p-2 border-2 border-gray-500 rounded text-sky-700" required><br>
 			</div>
 			<div>
 				<h3 class="sm:self-center sm:min-w[100px] flex-1">Description</h3>
