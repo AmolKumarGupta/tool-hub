@@ -60,7 +60,7 @@ if(isset($_POST['submit']) && !empty($_FILES['image']['name'])){
   unset($_POST['submit']);
   $data = Filter::data($_POST);
   // var_dump($data);
-  $cnt = Products::where('name','=',$data['name']);
+  $cnt = Products::where('id','=',$_GET['id']);
   // var_dump($cnt);
   if($cnt){
     foreach($data as $col=>$val){
@@ -72,5 +72,5 @@ if(isset($_POST['submit']) && !empty($_FILES['image']['name'])){
     header("Location: edit-product.php");
     die();
   }
-header("Location:dashboard.php");
+header("Location:edit-product.php?id=".$_GET['id'] );
 ?>

@@ -57,6 +57,9 @@ require_once('inc/header.php');
     window.onload = ()=>{
         a = [];
         store = JSON.parse(localStorage.getItem('cart'));
+        if(store != null){
+
+        
         store.forEach( e =>{
             a.push(e);
         });
@@ -65,9 +68,6 @@ require_once('inc/header.php');
         xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             res = this.responseText;
-            if(res == ''){
-                res = '<div class="text-blue-600">No Items Added</div>';
-            }
             document.querySelector('tbody').innerHTML = res;
             run();
         }
@@ -75,13 +75,23 @@ require_once('inc/header.php');
         xmlhttp.open("POST","product/fetchProduct.php",true);
         xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xmlhttp.send(params.toString());
-        // RUN()
+        /**
+         * RUN used to delete items from cart
+         */
         function run(){
             d = document.querySelectorAll('input[type="checkbox"]');
             total=0;
+            //if no items added ,then show message
+            if(d.length == 0){
+                document.querySelector('tbody').innerHTML = '<tr class="text-blue-600"><td></td> <td colspan="3" class="text-2xl text-center p-8">No Items Added</td></tr>';
+            }
+            str='';
             for(i=0; i<d.length; i++){
                 total += Number(d[i].dataset.price);
+                str += `<input type="hidden" name="prod_id[]" value="${d[i].dataset.id}">`;
             }
+            document.querySelector('#input-for-buy').innerHTML = str;
+            
             document.querySelector('#total-amt').innerText = total;
 
             delBtns = document.querySelectorAll('.del-row-btn');
@@ -101,13 +111,16 @@ require_once('inc/header.php');
                 });
             }
         }
+        }else{
+            document.querySelector('tbody').innerHTML = '<tr class="text-blue-600"><td></td> <td colspan="3" class="text-2xl text-center p-8">No Items Added</td></tr>';
+        }
     }
 </script>
 <script src="<?= PATH ?>/src/js/modal.js" defer></script>
 <div id="form-trans" class="hidden absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-fit p-4 border-2 border-gray-500 rounded-xl ">
-<form action="inc/transaction.php" method="post" class="flex flex-col gap-4 my-4">
+<form id="form-buy-all" action="inc/transactionAll.php" method="post" class="flex flex-col gap-4 my-4">
 	<h2>Payment details</h2>
-	<input type="hidden" name="prod_id" value="<?= $arr['id'][0] ?>">
+	<div id="input-for-buy"></div>
 	<input type="text" inputmode="numeric" pattern="^[0-9]+$" title="Credit Card Number" maxlength="12" placeholder="Card number" class="p-2 border-2 border-blue-300 rounded text-sky-700" required>
 	<div class="">
 		<input type="text" inputmode="numeric" pattern="^[0-9]+$" title="should be a date" maxlength="2" placeholder="MM" class="w-12 p-2 border-2 border-blue-300 rounded text-sky-700" required>

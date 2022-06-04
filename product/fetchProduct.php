@@ -12,7 +12,7 @@ foreach($id_arr as $id){
     $str .= '
     <tr class="table-rows">
     <td class="p-2">
-        <input type="checkbox" class="w-5 h-5 hidden" value="id-1" data-price="'. $arr["price"][0] .'" checked/>
+        <input type="checkbox" class="w-5 h-5 hidden" value="id-1" data-id="'. $arr["id"][0] .'" data-price="'. $arr["price"][0] .'" checked/>
     </td>
     <td class="p-2">
         <div class="font-medium text-gray-800 dark:text-gray-200">
