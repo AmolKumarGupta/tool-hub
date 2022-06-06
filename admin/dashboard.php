@@ -5,6 +5,7 @@ if(!isset($_SESSION['role'])){
 	die();
 }
 use App\Controllers\Products;
+use App\Controllers\Users;
 if(isset($_GET['page'])){
   $page = $_GET['page'];
 }else{
@@ -38,23 +39,24 @@ require_once('tab.php');
         <img src="assets/VHc5SJE.png" alt="" />
         <div class="text-center m-8">
           <h1 class="text-4xl font-bold">534</h1>
-          <span class="">Users</span>
+          <span class="">Visits</span>
         </div>
       </div>
       <div class="bg-gray-50 dark:bg-gray-700 sm:w-1/3 rounded-xl shadow-lg flex items-center justify-around">
         <img src="assets/Qnmqkil.png" alt="" />
         <div class="text-center m-8">
-          <h1 class="text-4xl font-bold "><?= Products::count() ?></h1>
-          <span class="">Products</span>
+          <h1 class="text-4xl font-bold"><?= Users::count() ?></h1>
+          <span class="">Users</span>
         </div>
       </div>
       <div class="bg-gray-50 dark:bg-gray-700 sm:w-1/3 rounded-xl shadow-lg flex items-center justify-around">
         <img src="assets/dJeEVcO.png" alt="" />
         <div class="text-center m-8">
-          <h1 class="text-4xl font-bold">50 M</h1>
-          <span class="">Revenue</span>
+          <h1 class="text-4xl font-bold "><?= Products::count() ?></h1>
+          <span class="">Products</span>
         </div>
       </div>
+
     </div>
 <?php
 require_once('table2.php');

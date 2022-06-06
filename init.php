@@ -1,13 +1,9 @@
 <?php
 session_start();
-if(file_exists('vendor/autoload.php')){
-  
-  require 'vendor/autoload.php';
-}else{
-  require_once('autoload.php');
-}
+require 'vendor/autoload.php';
 require_once('config/config.php');
 require_once('config/db.php');
+require_once('');
 
 if(isset($_SESSION['id'])){
   $name = $_SESSION['name'];
