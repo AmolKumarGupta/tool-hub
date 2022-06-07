@@ -35,13 +35,13 @@ require_once('tab.php');
 
 
 <div class="flex flex-col sm:flex-row flex-wrap sm:justify-center gap-4 mx-4 mt-4 sm:space-x-4 ">
-      <div class="bg-gray-50 dark:bg-gray-700 sm:w-1/3 rounded-xl shadow-lg flex items-center justify-around ">
+      <!-- <div class="bg-gray-50 dark:bg-gray-700 sm:w-1/3 rounded-xl shadow-lg flex items-center justify-around ">
         <img src="assets/VHc5SJE.png" alt="" />
         <div class="text-center m-8">
           <h1 class="text-4xl font-bold">534</h1>
           <span class="">Visits</span>
         </div>
-      </div>
+      </div> -->
       <div class="bg-gray-50 dark:bg-gray-700 sm:w-1/3 rounded-xl shadow-lg flex items-center justify-around">
         <img src="assets/Qnmqkil.png" alt="" />
         <div class="text-center m-8">

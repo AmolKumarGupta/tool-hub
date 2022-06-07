@@ -10,5 +10,5 @@ if(isset($_SESSION['id'])){
 }
 use App\Db;
 $db = new Db();
-require_once('inc/countVisits.php');
+//require_once('inc/countVisits.php');
 ?>
