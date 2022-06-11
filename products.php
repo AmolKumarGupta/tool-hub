@@ -55,7 +55,7 @@ require_once('inc/header.php');
     height:150px;
   }
 </style>
-<section class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 w-full h-full p-4">
+<section class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 w-full h-full p-4 md:px-[8rem]">
   <?php
   
   for($i=0; $i<count($arr['id']); $i++){
